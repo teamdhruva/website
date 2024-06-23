@@ -17,22 +17,7 @@ html{
   border-radius: 50px;
 
 }
-.navbar{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  cursor:pointer;
-  background-color: black;
-}
 
-.nav-list li{
-  list-style: none;
-  font-family: 'Roboto Mono', monospace;
-  padding: 26px 13px;
-
-}
 .nav-list li a{
   text-decoration: none;
   font-size: 17px;
@@ -79,7 +64,6 @@ html{
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: 'Roboto Mono', monospace;
   /* max-width: 50%; */
   margin: auto;
   /* height: 80%; */
@@ -151,7 +135,6 @@ font-size: 12px;
   align-items: center;
   justify-content: space-evenly;
   max-width: 100%;
-  font-family: 'Roboto Mono', monospace;
   background: rgba(0, 0, 0, 0.7) url('secbg.jpeg');
   background-size: cover;
   background-blend-mode: darken;
@@ -221,7 +204,6 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-family: 'Roboto Mono', monospace;
   background: rgba(0, 0, 0, 0.7) url('secbg.jpeg');
   background-blend-mode: darken;
   background-size: cover;
@@ -239,9 +221,7 @@ justify-content: center;
   padding: 16px 0;
 
 }
-.sectionSubTag{
-  font-family: 'Roboto Mono', monospace;
-}
+
 .secLeftLast{
   height: 500px;
   display: flex;
@@ -250,7 +230,6 @@ justify-content: center;
   max-width: 100%;
   margin: auto;
   flex-direction: row-reverse;
-  font-family: 'Roboto Mono', monospace;
   background: rgba(0, 0, 0, 0.7) url('secbg.jpeg');
   background-blend-mode: darken;
   background-size: cover;
@@ -259,18 +238,15 @@ justify-content: center;
 .Contact{
   background-color: #A5F1E9;
   max-height: 20%;
-  font-family: 'Roboto Mono', monospace;
 }
 .text-centre{
   text-align: center;
-  font-family: 'Roboto Mono', monospace;
 
 }
 .footer{
   max-height: 20%;
   text-align: center;
   background-color: #434242;
-  font-family: 'Roboto Mono', monospace;
 }
 .social{
   display: flex;

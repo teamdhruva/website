@@ -4,8 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: 'SF Mono', 'Roboto Mono', monospace;
+}
+
 @media only screen and (max-width: 1140px) {
-    .nav-list{
+    /* .nav-list{
       flex-direction: column;
   
     }
@@ -17,7 +21,7 @@
     }
     #Search{
       width: 100%;
-    }
+    } */
   
     .burger{
       position: absolute;
@@ -38,8 +42,8 @@
     .h-nav-resp{
       height: 72px;
     }
-    .v-class-resp{
+    /* .v-class-resp{
       visibility: hidden;
-    }
+    } */
   }
   
