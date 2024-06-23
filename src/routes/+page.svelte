@@ -7,9 +7,7 @@
       <div class="max-w-96 p-4">
         <p class="text-big">Team Dhruva</p>
         <p class="text-small">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type.
+          Where curiosity meets the cosmos
         </p>
         <div class="buttons">
           <button class="btn-initial">
@@ -26,14 +24,11 @@
   <section class="secRight h-screen" id="Projects">
     <div class="paras">
       <p class="sectionTag text-big">Projects</p>
-      <p
-        class="flex justify-center align-middle max-w-[32rem] sectionSubTag text-small"
-      >
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
-      </p>
+      <ul class="flex flex-col justify-center align-middle max-w-[32rem] sectionSubTag text-small">
+        <li>10 inch telescope</li>
+        <li>Astrophotography</li>
+        <li>Solar Radio Telescope</li>
+      </ul>
     </div>
     <!-- <div class="thumbnail">
             <img class="thumbnail"src="newbg.jpeg" alt="sameImg">
@@ -52,7 +47,7 @@
         <div class="singlepic text-white">
           <img class="rounded-3xl max-w-60" src="img1.jpeg" alt="pic1" />
         </div>
-        <h3 class="text-white text-center">Faculty advisor:Karthik Shastry</h3>
+        <h3 class="text-white text-center">Faculty advisor: Prof. Karthik Shastry</h3>
       </div>
 
       <div
@@ -84,7 +79,7 @@
   <!--</section> -->
   <section class="secRight h-screen" id="Alumni">
     <div class="paras">
-      <p class="sectionTag text-big">This is the best thing</p>
+      <p class="sectionTag text-big">I forgot what to put here</p>
       <div class="flex flex-row overflow-hidden items-center">
         <p class="flex-1 sectionSubTag text-small">
           Lorem Ipsum is simply dummy text of the printing and typesetting
