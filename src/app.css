@@ -1,7 +1,8 @@
+@import './styles.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './styles.css';
 
 @media only screen and (max-width: 1140px) {
     .nav-list{
