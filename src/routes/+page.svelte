@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="secondHalf"></div>
-      <img class="space max-sm:hidden" src="newbg.jpeg" alt="telescope" />
+      <img class="space max-sm:hidden" src="/newbg.jpeg" alt="telescope" />
     </div>
   </section>
   <section class="secRight h-screen" id="Projects">
@@ -45,7 +45,7 @@
       <p class="sectionTag text-big">Team</p>
       <div class="p-10">
         <div class="singlepic text-white">
-          <img class="rounded-3xl max-w-60" src="img1.jpeg" alt="pic1" />
+          <img class="rounded-3xl max-w-60" src="/img1.jpeg" alt="pic1" />
         </div>
         <h3 class="text-white text-center">Faculty advisor: Prof. Karthik Shastry</h3>
       </div>
@@ -55,22 +55,22 @@
       >
         <img
           class="max-w-60 max-sm:max-w-32 rounded-3xl"
-          src="img1.jpeg"
+          src="/img1.jpeg"
           alt="pic1"
         />
         <img
           class="max-w-60 max-sm:max-w-32 rounded-3xl"
-          src="img1.jpeg"
+          src="/img1.jpeg"
           alt="pic1"
         />
         <img
           class="max-w-60 max-sm:max-w-32 rounded-3xl"
-          src="img1.jpeg"
+          src="/img1.jpeg"
           alt="pic1"
         />
         <img
           class="max-w-60 max-sm:max-w-32 rounded-3xl"
-          src="img1.jpeg"
+          src="/img1.jpeg"
           alt="pic1"
         />
       </div>
@@ -90,7 +90,7 @@
         <div class="thumbnail flex-shrink">
           <img
             class="secondWala max-w-10 max-sm:hidden"
-            src="newbg.jpeg"
+            src="/newbg.jpeg"
             alt="sameImg"
           />
         </div>
@@ -100,7 +100,7 @@
   <!-- </section> -->
   <!-- <section class="secLeftLast" id="Sponsors">
     
-        <img class="sky" src="skyroot.png" alt="gold">
+        <img class="sky" src="/skyroot.png" alt="gold">
     
     
     </section> -->

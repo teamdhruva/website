@@ -54,7 +54,7 @@ html{
 
 }
 .background{
-  background: rgba(0, 0, 0, 0.7) url('bg.jpeg');
+  background: rgba(0, 0, 0, 0.7) url('/bg.jpeg');
   background-size: cover;
   background-blend-mode: darken;
 }
@@ -135,7 +135,7 @@ font-size: 12px;
   align-items: center;
   justify-content: space-evenly;
   max-width: 100%;
-  background: rgba(0, 0, 0, 0.7) url('secbg.jpeg');
+  background: rgba(0, 0, 0, 0.7) url('/secbg.jpeg');
   background-size: cover;
   background-blend-mode: darken;
   color: white;
@@ -204,7 +204,7 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: rgba(0, 0, 0, 0.7) url('secbg.jpeg');
+  background: rgba(0, 0, 0, 0.7) url('/secbg.jpeg');
   background-blend-mode: darken;
   background-size: cover;
 
@@ -230,7 +230,7 @@ justify-content: center;
   max-width: 100%;
   margin: auto;
   flex-direction: row-reverse;
-  background: rgba(0, 0, 0, 0.7) url('secbg.jpeg');
+  background: rgba(0, 0, 0, 0.7) url('/secbg.jpeg');
   background-blend-mode: darken;
   background-size: cover;
  color: white;
