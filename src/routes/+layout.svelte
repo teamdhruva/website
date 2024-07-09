@@ -23,7 +23,7 @@
       <div><a class="hover:text-cyan-300" href="#home">Home</a></div>
       <div><a class="hover:text-cyan-300" href="#Projects">Projects</a></div>
       <div><a class="hover:text-cyan-300" href="#Team">Team</a></div>
-      <div><a class="hover:text-cyan-300" href="#Alumni">Alumni</a></div>
+      <!-- <div><a class="hover:text-cyan-300" href="#Alumni">Alumni</a></div> -->
       <div><a class="hover:text-cyan-300" href="#Contact Us">Contact</a></div>
     </div>
 
@@ -35,7 +35,7 @@
         <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#home">Home</a></div>
         <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Projects">Projects</a></div>
         <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Team">Team</a></div>
-        <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Alumni">Alumni</a></div>
+        <!-- <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Alumni">Alumni</a></div> -->
         <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Contact Us">Contact</a></div>
       </div>
     {/if}

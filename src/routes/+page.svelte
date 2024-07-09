@@ -79,13 +79,10 @@
   <!--</section> -->
   <section class="secRight h-screen" id="Alumni">
     <div class="paras">
-      <p class="sectionTag text-big">I forgot what to put here</p>
+      <p class="sectionTag text-big">About us</p>
       <div class="flex flex-row overflow-hidden items-center">
         <p class="flex-1 sectionSubTag text-small">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          LIGO aims to detect and study gravitational waves, which are ripples in spacetime caused by violent and energetic processes in the universe. These waves provide a new way to observe and understand events such as the merging of black holes and neutron stars, supernovae, and potentially other astrophysical phenomena.
         </p>
         <div class="thumbnail flex-shrink">
           <img
