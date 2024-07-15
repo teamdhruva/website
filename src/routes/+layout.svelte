@@ -12,42 +12,86 @@
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">
-  <nav class="flex flex-col fixed w-full bg-black items-center justify-center">
-    <div
-      class="max-sm:hidden flex flex-row items-center text-white gap-10 bg-black max-w-screen-lg pl-2 pr-5 py-2"
-    >
-      <div class="max-sm:hidden logo">
-        <a href="#home"><img src="Dhruva logo.png" alt="logo" /></a>
-      </div>
-      <span class="flex-1"></span>
-      <div><a class="hover:text-cyan-300" href="#home">Home</a></div>
-      <div><a class="hover:text-cyan-300" href="#Projects">Projects</a></div>
-      <div><a class="hover:text-cyan-300" href="#Team">Team</a></div>
-      <!-- <div><a class="hover:text-cyan-300" href="#Alumni">Alumni</a></div> -->
-      <div><a class="hover:text-cyan-300" href="#Contact Us">Contact</a></div>
-    </div>
+	
+  
+	<slot />
+  </div>
 
-    {#if visible}
-      <div
-        transition:fly={{ y: -200, duration: 300 }}
-        class="top-0 w-full fixed bg-black flex flex-col items-center gap-5 text-white p-5"
-      >
-        <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#home">Home</a></div>
-        <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Projects">Projects</a></div>
-        <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Team">Team</a></div>
-        <!-- <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Alumni">Alumni</a></div> -->
-        <div><a class="hover:text-cyan-300" on:click={() => visible=false} href="#Contact Us">Contact</a></div>
-      </div>
-    {/if}
+<div class="navbar">
+	<div class="logo">
+		dhRuVa
+	</div>
+	<ul class="nav-links">
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#Projects">Projects</a></li>
+	  <li><a href="#">Team</a></li>
+	  <li><a href="#About us">About Us</a></li>
+	  <li><a href="#Contact Us">Contact</a></li>
+	  
 
-    <button class="sm:hidden burger" on:click={() => (visible = !visible)}>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </button>
-  </nav>
+	</ul>
+  </div>
 
-  <slot />
-</div>
-
-<style></style>
+  <style>
+    /* Add CSS styles here */
+    .navbar {
+      /*background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
+      background-color: transparent;
+      border: 2px solid rgba(250, 250, 250);
+      backdrop-filter: blur(10px); 
+      position: fixed;
+      top: 50px; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px); 
+      max-width: 1200px; 
+      padding: 15px;
+      border-radius: 7px; 
+      z-index: 1000; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); 
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white; 
+  
+    }
+    
+    .nav-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+    }
+    
+    .nav-links li {
+      margin-right: 15px;
+      
+      
+    }
+    
+    .nav-links li a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      color:white; 
+      transition: color 0.3s ease;
+      padding-left: 20px;
+    }
+    
+    .nav-links li a:hover {
+      color:#00bfff; 
+    }
+  
+    .Img{
+      width:50px;
+      height:50px;
+    }
+  
+  
+    
+    </style>
