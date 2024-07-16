@@ -9,7 +9,7 @@
   const links = [
     { href: "#home", text: "Home" },
     { href: "#projects", text: "Projects" },
-    { href: "#team", text: "Team" },
+    { href: "#", text: "Team" }, // TODO: Add team page
     { href: "#about", text: "About" },
     { href: "#contact", text: "Contact" }
   ];
