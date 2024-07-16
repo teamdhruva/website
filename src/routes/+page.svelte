@@ -250,7 +250,7 @@ What began as a quest to explore the secrets of the universe is now a growing te
   </div>
 </div>
 
-c
+
 
 </footer>
 
