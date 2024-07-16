@@ -1,3 +1,25 @@
+<script>
+  import ProjectCard from "$lib/components/ProjectCard.svelte";
+
+  const projects = [
+    {
+      imgSrc: "/newbg.jpeg",
+      title: "10 inch Telescope",
+      description: "Description of Project 1",
+    },
+    {
+      imgSrc: "/newbg.jpeg",
+      title: "Astrophotography",
+      description: "Description of Project 2",
+    },
+    {
+      imgSrc: "/newbg.jpeg",
+      title: "Solar Radio Telescope",
+      description: "Description of Project 3",
+    },
+  ];
+</script>
+
 <section class="flex items-center justify-center background h-screen" id="home">
   <div class="box-main max-w-[48rem] flex-1">
     <div class="max-w-96 p-4">
@@ -17,58 +39,19 @@
 </section>
 
 <section
-  class="secRight h-screen flex flex-col items-center justify-center"
+  class="secRight min-h-screen h-min flex flex-col items-center justify-center"
   id="projects"
 >
-  <p class="p-4 text-big font-bold text-center text-white mb-8">
-    PROJECTS
-  </p>
+  <p class="p-4 text-big font-bold text-center text-white mb-8">PROJECTS</p>
 
-  <div class="grid grid-cols-3 gap-6 max-w-screen-lg">
-    <div
-      class="flex flex-col items-center bg-black rounded-lg p-6 shadow-md border border-white"
-    >
-      <img src="/newbg.jpeg" alt="Project 1" class="mb-4 rounded-lg" />
-      <h3 class="text-xl font-semibold mb-2 text-white">10 inch Telescope</h3>
-      <p class="text-sm text-center mb-4">
-        Description of Project 1
-      </p>
-      <button
-        class="btn-action text-white py-2 px-4"
-      >
-        Learn More
-      </button>
-    </div>
-    <div
-      class="flex flex-col items-center bg-black rounded-lg p-6 shadow-md border border-white"
-    >
-      <img src="/newbg.jpeg" alt="Project 2" class="mb-4 rounded-lg" />
-      <h3 class="text-xl font-semibold mb-2 text-white">Astrophotography</h3>
-      <p class="text-sm text-center mb-4 text-white">
-        Description of Project 2
-      </p>
-      <button
-        class="btn-action py-2 px-4 rounded"
-      >
-        Learn More
-      </button>
-    </div>
-    <div
-      class="flex flex-col items-center bg-black rounded-lg p-6 shadow-md border border-white"
-    >
-      <img src="/newbg.jpeg" alt="Project 3" class="mb-4 rounded-lg" />
-      <h3 class="text-xl font-semibold mb-2 text-white">
-        Solar Radio Telescope
-      </h3>
-      <p class="text-sm text-center mb-4 text-white">
-        Description of Project 3
-      </p>
-      <button
-        class="btn-action py-2 px-4"
-      >
-        Learn More
-      </button>
-    </div>
+  <div class="flex flex-wrap justify-center gap-6">
+    {#each projects as project}
+      <ProjectCard
+        imgSrc={project.imgSrc}
+        title={project.title}
+        description={project.description}
+      />
+    {/each}
   </div>
 
   <div class="mt-8">
@@ -83,7 +66,7 @@
   </div>
 </section>
 
-<section class="secRight h-screen" id="about">
+<section class="secRight min-h-screen h-min" id="about">
   <div class="paras">
     <p class="p-4 text-big font-bold text-center">ABOUT US</p>
     <div

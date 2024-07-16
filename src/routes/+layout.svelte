@@ -38,7 +38,7 @@
 </div>
 
 <div class="top-0 w-full left-1/2 backdrop-blur flex shadow -translate-x-1/2 rounded-lg z-50 fixed justify-between items-center bg-transparent border-2 max-w-screen-xl p-4">
-  <div class="logo font-bold text-2xl text-white px-20">dhRuVa</div>
+  <div class="logo font-bold text-2xl text-white px-10 md:px-20">dhRuVa</div>
   <div class="hidden md:flex flex-row p-3 gap-12 font-semibold no-underline">
     {#each links as link}
       <span><a class="text-white transition hover:text-sky-500" href="{link.href}">{link.text}</a></span>
@@ -57,7 +57,7 @@
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
-          d="M4 6h16M4 12h16m-7 6h7"
+          d="M4 6h16M4 12h16m-16 6h16"
         ></path>
       </svg>
     </button>

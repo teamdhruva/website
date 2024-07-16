@@ -119,17 +119,12 @@ font-size: 12px;
 
 }
 .secRight{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  max-width: 100%;
   background: rgba(0, 0, 0, 0.7) url('/secbg.jpeg');
   background-size: cover;
   background-blend-mode: darken;
   color: white;
-
-
 }
+
 .singlepic{
   display: flex;
   justify-content: center;
@@ -269,9 +264,7 @@ a:hover{
 .secLeft{
   height: 100vh;
 }
-.secRight{
-  height: 100vh;
-}
+
 .secLeftLast{
   height: 100vh;
 
