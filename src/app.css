@@ -8,42 +8,6 @@ body {
     font-family: 'SF Mono', 'Roboto Mono', monospace;
 }
 
-@media only screen and (max-width: 1140px) {
-    /* .nav-list{
-      flex-direction: column;
-  
-    }
-    .navbar{
-      flex-direction: column;
-    }
-    .rightnav{
-      text-align: center;
-    }
-    #Search{
-      width: 100%;
-    } */
-  
-    .burger{
-      position: absolute;
-      cursor: pointer;
-      right: 5%;
-      top: 15px;
-  
-    }
-    .line{
-      width: 33px;
-      background-color: white;
-      height: 4px;
-      margin: 5px 3px;
-    }
-    .burger{
-      display: block;
-    }
-    .h-nav-resp{
-      height: 72px;
-    }
-    /* .v-class-resp{
-      visibility: hidden;
-    } */
-  }
-  
+.btn-action {
+    @apply rounded cursor-pointer bg-blue-500 hover:bg-blue-600 transition disabled:bg-blue-400 disabled:hover:bg-blue-400 disabled:cursor-not-allowed
+}

@@ -5,18 +5,6 @@
 html{
   scroll-behavior: smooth;
 }
-.logo{
-  width: 19%;
-  display: flex;
-  justify-content: center;
-   align-items: center;
-}
-.logo img{
-  width: 33%;
-  border: 3px solid white;
-  border-radius: 50px;
-
-}
 
 .nav-list li a{
   text-decoration: none;
@@ -216,10 +204,6 @@ justify-content: center;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-}
-.sectionTag{
-  padding: 16px 0;
-
 }
 
 .secLeftLast{
