@@ -4,6 +4,7 @@
   import { slide } from "svelte/transition";
   import { onMount } from "svelte";
   import { browser } from "$app/environment";
+  import Burger from "$lib/icons/Burger.svelte";
   let showMenu = false;
 
   const links = [
@@ -46,20 +47,7 @@
   </div>
   <div class="md:hidden flex items-center">
     <button class="text-white" on:click={() => (showMenu = !showMenu)}>
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16m-16 6h16"
-        ></path>
-      </svg>
+      <Burger />
     </button>
   </div>
 </div>
