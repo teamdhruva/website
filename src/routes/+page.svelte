@@ -23,8 +23,8 @@
 <section class="flex items-center justify-center background h-screen" id="home">
   <div class="box-main max-w-[48rem] flex-1">
     <div class="max-w-96 p-4">
-      <p class="text-big">Team Dhruva</p>
-      <p class="text-small">Where curiosity meets the cosmos</p>
+      <p class="text-4xl">Team Dhruva</p>
+      <p class="text-lg">Where curiosity meets the cosmos</p>
       <div class="buttons">
         <button class="btn-initial">
           <a class="top1" href="https://www.youtube.com/@dhruva1910"
@@ -42,7 +42,7 @@
   class="secRight min-h-screen h-min flex flex-col items-center justify-center"
   id="projects"
 >
-  <p class="p-4 text-big font-bold text-center text-white mb-8">PROJECTS</p>
+  <p class="p-4 text-4xl font-bold text-center text-white mb-8">PROJECTS</p>
 
   <div class="flex flex-wrap justify-center gap-6">
     {#each projects as project}
@@ -67,8 +67,8 @@
 </section>
 
 <section class="secRight min-h-screen h-min" id="about">
-  <div class="paras">
-    <p class="p-4 text-big font-bold text-center">ABOUT US</p>
+  <div class="px-12">
+    <p class="p-4 text-4xl font-bold text-center">ABOUT US</p>
     <div
       class="flex flex-col gap-4 border border-white rounded-lg p-6 animate-twinkle"
     >
