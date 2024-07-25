@@ -8,10 +8,10 @@
   let showMenu = false;
 
   const links = [
-    { href: "#home", text: "Home" },
-    { href: "#projects", text: "Projects" },
-    { href: "#", text: "Team" }, // TODO: Add team page
-    { href: "#about", text: "About" },
+    { href: "/", text: "Home" },
+    { href: "/about", text: "About" },
+    { href: "/projects", text: "Projects" },
+    { href: "/team", text: "Team" },
     { href: "#contact", text: "Contact" }
   ];
 
@@ -29,10 +29,10 @@
 <svelte:head>
   <title>dhRuVa</title>
 
-  <script src="resp.js"></script>
+  <!-- <script src="resp.js"></script> -->
 </svelte:head>
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen h-full">
   <slot />
 
   <Footer />
