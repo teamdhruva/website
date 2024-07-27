@@ -26,7 +26,7 @@ export const teamMembers: TeamMember[] = [
         linkedin: null,
         instagram: null,
         image: null,
-        linl: null,
+        link: null,
     },
     {
         name: "Khushi",

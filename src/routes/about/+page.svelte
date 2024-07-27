@@ -1,5 +1,5 @@
 <div class="flex flex-1 flex-col items-center regular-bg min-h-screen">
-  <div class="flex flex-col max-w-screen-lg mx-4 mt-40 text-xl gap-4">
+  <div class="flex flex-col max-w-screen-lg mx-4 mt-40 mb-12 text-xl gap-4">
     <h1 class="text-6xl text-center font-bold text-white">About us</h1>
     <p class="italic text-2xl">
       We are stardust brought to life, then empowered by the universe to figure

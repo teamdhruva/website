@@ -22,19 +22,16 @@
 
 <section class="flex items-center justify-center background h-screen" id="home">
   <div class="box-main max-w-[48rem] flex-1">
-    <div class="max-w-96 p-4">
-      <p class="text-4xl">Team Dhruva</p>
+    <div class="flex flex-col gap-2 p-4 text-center">
+      <p class="text-5xl sm:text-8xl">Team Dhruva</p>
       <p class="text-lg">Where curiosity meets the cosmos</p>
       <div class="buttons">
-        <button class="btn-initial">
-          <a class="top1" href="https://www.youtube.com/@dhruva1910"
+        <a class="text-lg text-sky-400 transition hover:text-sky-500" href="/about"
             >Learn More</a
-          ></button
-        >
+          >
       </div>
     </div>
     <div class="secondHalf"></div>
-    <img class="space max-sm:hidden" src="/newbg.jpeg" alt="telescope" />
   </div>
 </section>
 

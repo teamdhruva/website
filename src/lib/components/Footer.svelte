@@ -13,9 +13,9 @@
         Team Dhruva
       </h1>
       <p>
-        RV COLLEGE OF ENGINEERING<br />
-        MYSURU ROAD<br />
-        BENGALURU - 560059, INDIA.
+        RV College of Engineering<br />
+        8th Mile, Mysuru Road<br />
+        Bengaluru - 560059, India
       </p>
       <p>
         Write to us at:
@@ -46,24 +46,24 @@
     <!-- Middle section: Quick links -->
     <div class="space-y-6">
       <h3 class="text-2xl font-semibold">Quick Links</h3>
-      <ul class="space-y-3">
-        <li>
-          <a href="#" class="text-white transition hover:text-sky-500">About</a>
-        </li>
-        <li>
+      <div class="grid grid-cols-2 md:grid-cols-1 gap-2">
+        <span>
+          <a href="/about" class="text-white transition hover:text-sky-500">About</a>
+        </span>
+        <span>
+          <a href="/projects" class="text-white transition hover:text-sky-500"
+            >Projects</a
+          >
+        </span>
+        <span>
           <a href="#" class="text-white transition hover:text-sky-500"
             >Calendar of Events</a
           >
-        </li>
-        <li>
-          <a href="#" class="text-white transition hover:text-sky-500"
-            >Projects</a
-          >
-        </li>
-        <li>
-          <a href="#" class="text-white transition hover:text-sky-500">Blog</a>
-        </li>
-      </ul>
+        </span>
+        <span>
+          <a href="/blog" class="text-white transition hover:text-sky-500">Blog</a>
+        </span>
+      </div>
     </div>
 
     <!-- Right section: Subscribe -->
