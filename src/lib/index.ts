@@ -25,7 +25,7 @@ export const teamMembers: TeamMember[] = [
         role: "Team Captain",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/aryan.jpg",
         link: null,
     },
     {
@@ -33,7 +33,7 @@ export const teamMembers: TeamMember[] = [
         role: "Team Captain",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/khushi.jpg",
         link: null,
     },
     {
@@ -41,7 +41,7 @@ export const teamMembers: TeamMember[] = [
         role: "Technical Lead",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/sunil.jpg",
         link: null,
     },
     {
@@ -49,7 +49,7 @@ export const teamMembers: TeamMember[] = [
         role: "PR Lead",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/aditi.jpg",
         link: null,
     },
     {
@@ -57,7 +57,7 @@ export const teamMembers: TeamMember[] = [
         role: "Optical Head",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/shashank.jpg",
         link: null,
     },
     {
@@ -65,7 +65,7 @@ export const teamMembers: TeamMember[] = [
         role: "Optical Head",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/vinay.jpg",
         link: null,
     },
     {
@@ -73,7 +73,7 @@ export const teamMembers: TeamMember[] = [
         role: "Radio Head",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/rohith.jpg",
         link: null,
     },
     {
@@ -81,7 +81,7 @@ export const teamMembers: TeamMember[] = [
         role: "Radio Head",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/harshhitha.jpg",
         link: null,
     },
     {
@@ -89,7 +89,7 @@ export const teamMembers: TeamMember[] = [
         role: "DDA Head",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/aneesh.jpg",
         link: null,
     },
     {
@@ -105,7 +105,7 @@ export const teamMembers: TeamMember[] = [
         role: "Research Head",
         linkedin: null,
         instagram: null,
-        image: null,
+        image: "/team/core/akash.jpg",
         link: null,
     },
     {

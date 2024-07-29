@@ -42,10 +42,10 @@
 </div>
 
 <div
-  class="top-0 mt-10 w-11/12 left-1/2 backdrop-blur flex shadow -translate-x-1/2 rounded-lg z-50 fixed justify-between items-center bg-transparent border-2 max-w-screen-xl p-4"
+  class="top-0 mt-10 w-11/12 left-1/2 backdrop-blur flex shadow -translate-x-1/2 rounded-lg z-50 fixed justify-between items-center bg-transparent border max-w-screen-xl p-4"
 >
-  <a class="logo font-bold text-2xl text-white px-5" href="/">
-    <img src="/text_logo.png" class="h-12" alt="dhRuVa logo" />
+  <a class="logo font-bold text-2xl text-white" href="/">
+    <img src="/text_logo.png" class="max-sm:h-8 sm:h-12" alt="dhRuVa logo" />
   </a>
   <div class="hidden md:flex flex-row p-3 gap-12 font-semibold no-underline">
     {#each links as link}
@@ -66,7 +66,7 @@
 {#if showMenu}
   <div
     transition:slide
-    class="fixed top-24 left-0 w-full bg-transparent backdrop-blur border-t-2 border-b-2 shadow-lg z-40"
+    class="fixed top-28 left-0 w-full bg-transparent backdrop-blur border shadow-lg z-40"
   >
     <div class="flex flex-col p-4 gap-4 font-semibold items-center">
       {#each links as link}
