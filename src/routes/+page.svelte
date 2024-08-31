@@ -1,4 +1,5 @@
 <script>
+  import { browser } from "$app/environment";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
 
   const projects = [
@@ -23,12 +24,20 @@
 <section class="flex items-center justify-center background h-screen" id="home">
   <div class="box-main max-w-[48rem] flex-1">
     <div class="flex flex-col gap-2 p-4 text-center">
-      <p class="text-5xl sm:text-8xl">Team Dhruva</p>
-      <p class="text-lg">Where curiosity meets the cosmos</p>
+      <p class="text-5xl sm:text-8xl">
+        <img
+          src="/text_logo.png"
+          class="max-sm:h-20 sm:h-48"
+          alt="dhRuVa logo"
+          id="mainlogo"
+        />
+      </p>
+      <p class="text-xl">Where curiosity meets the cosmos</p>
       <div class="buttons">
-        <a class="text-lg text-sky-400 transition hover:text-sky-500" href="/about"
-            >Learn More</a
-          >
+        <a
+          class="text-lg text-sky-400 transition hover:text-sky-500"
+          href="/about">Learn More</a
+        >
       </div>
     </div>
     <div class="secondHalf"></div>
@@ -36,10 +45,12 @@
 </section>
 
 <section
-  class="secRight min-h-screen h-min flex flex-col items-center justify-center"
+  class="secRight bg-fixed min-h-screen h-min flex flex-col items-center justify-center"
   id="projects"
 >
-  <p class="p-4 text-4xl font-bold text-center text-white mb-8">PROJECTS</p>
+  <p class="p-4 text-4xl font-bold text-center text-white mb-8">
+    Our Projects
+  </p>
 
   <div class="flex flex-wrap justify-center gap-6">
     {#each projects as project}
@@ -51,16 +62,16 @@
     {/each}
   </div>
 
-  <div class="mt-8">
+  <!-- <div class="mt-8">
     <button
       class="relative bg-black text-white py-2 px-4 rounded border-2 border-white overflow-hidden hover:bg-gray-800 transition duration-300"
     >
       <span
         class="absolute inset-0 bg-gradient-to-t from-white opacity-30 animate-pulse"
       ></span>
-      EXPLORE
+      Learn more
     </button>
-  </div>
+  </div> -->
 </section>
 
 <style>

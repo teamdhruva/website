@@ -1,5 +1,5 @@
 .background {
-    background: rgba(0, 0, 0, 0.7) url('/bg.jpeg');
+    background: rgba(0, 0, 0, 0.4) url('/bg.jpeg');
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -10,6 +10,21 @@
     align-items: center;
     color: white;
     margin: auto;
+}
+
+#mainlogo {
+    animation: slideInFromTop 2s ease-out;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .space {
@@ -25,12 +40,29 @@
     background-size: cover;
     background-blend-mode: darken;
     color: white;
+
+    @apply bg-fixed
 }
 
 .regular-bg {
     background: rgba(0, 0, 0, 0.7) url('/secbg.jpeg');
-    background-size: cover;
+    background-size: 100%;
     background-blend-mode: darken;
+    background-position: center;
+    animation: scaleBackground 4s ease-in-out infinite;
+    background-attachment: fixed; /* Ensures the background remains fixed */
+}
+
+@keyframes scaleBackground {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 105%; /* Scales the background image */
+    }
+    100% {
+        background-size: 100%;
+    }
 }
 
 .btn-initial {

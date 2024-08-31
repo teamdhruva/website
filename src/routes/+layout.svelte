@@ -8,9 +8,11 @@
   let showMenu = false;
 
   const links = [
+    { href: "/", text: "Home" },
     { href: "/about", text: "About" },
     { href: "/projects", text: "Projects" },
     { href: "/gallery", text: "Gallery" },
+    { href: "/events", text: "Events" },
     { href: "/team", text: "Team" },
     { href: "#contact", text: "Contact" },
   ];
@@ -29,9 +31,12 @@
 <svelte:head>
   <title>dhRuVa</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet"
+  />
   <!-- <script src="resp.js"></script> -->
 </svelte:head>
 
