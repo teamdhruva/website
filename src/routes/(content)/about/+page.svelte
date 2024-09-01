@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>About us</title>
+</svelte:head>
+
 <div class="flex flex-col max-w-screen-lg mx-4 mt-40 mb-12 text-xl gap-4">
   <h1 class="text-6xl text-center font-bold text-white">About us</h1>
   <p class="italic text-2xl">

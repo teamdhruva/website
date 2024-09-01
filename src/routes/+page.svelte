@@ -32,7 +32,7 @@
           id="mainlogo"
         />
       </p>
-      <p class="text-xl">Where curiosity meets the cosmos</p>
+      <p class="text-xl">The Astrophysics club of RVCE</p>
       <div class="buttons">
         <a
           class="text-lg text-sky-400 transition hover:text-sky-500"

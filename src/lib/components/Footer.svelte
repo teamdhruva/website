@@ -1,7 +1,7 @@
 <script>
   import Instagram from "$lib/icons/Instagram.svelte";
   import YouTube from "$lib/icons/YouTube.svelte";
-  </script>
+</script>
 
 <footer class="bg-neutral-900 text-white pt-12 pb-6" id="contact">
   <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
@@ -48,7 +48,9 @@
       <h3 class="text-2xl font-semibold">Quick Links</h3>
       <div class="grid grid-cols-2 md:grid-cols-1 gap-2">
         <span>
-          <a href="/about" class="text-white transition hover:text-sky-500">About</a>
+          <a href="/about" class="text-white transition hover:text-sky-500"
+            >About</a
+          >
         </span>
         <span>
           <a href="/projects" class="text-white transition hover:text-sky-500"
@@ -56,12 +58,18 @@
           >
         </span>
         <span>
-          <a href="#" class="text-white transition hover:text-sky-500"
-            >Calendar of Events</a
+          <a href="/events" class="text-white transition hover:text-sky-500">Events</a
           >
         </span>
         <span>
-          <a href="/blog" class="text-white transition hover:text-sky-500">Blog</a>
+          <a href="/blog" class="text-white transition hover:text-sky-500"
+            >Blog</a
+          >
+        </span>
+        <span>
+          <a href="/admin" class="text-white transition hover:text-sky-500"
+            >Admin</a
+          >
         </span>
       </div>
     </div>

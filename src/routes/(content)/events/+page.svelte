@@ -5,7 +5,7 @@
 
   <div class="flex flex-col max-w-screen-lg w-full">
     <a
-      href={`/events/stargazing-spectacles-1`}
+      href={`/events/`}
       class="flex-col max-sm:items-center bg-neutral-800 hover:bg-neutral-700 bg-opacity-50 hover:bg-opacity-50 transition rounded-lg gap-4 p-4 m-4"
     >
       <h1 class="font-semibold text-3xl text-center mb-4">
@@ -14,17 +14,17 @@
 
       <div class="flex flex-row flex-wrap justify-center items-center gap-4">
         <img
-          src="/images/favicon.png"
+          src="/favicon.png"
           class="p-4 bg-neutral-200 bg-opacity-50 flex w-40 h-40 items-center justify-center"
           alt="example image"
         />
         <img
-          src="/images/favicon.png"
+          src="/favicon.png"
           class="p-4 bg-neutral-200 bg-opacity-50 flex w-40 h-40 items-center justify-center"
           alt="example image"
         />
         <img
-          src="/images/favicon.png"
+          src="/favicon.png"
           class="p-4 bg-neutral-200 bg-opacity-50 flex w-40 h-40 items-center justify-center"
           alt="example image"
         />
