@@ -3,55 +3,55 @@ export interface GalleryImage {
     alt: string;
 }
 
-// write an array of 10 galleryImage each with src as "" and alt as 'shrirang didnt send them yet'
+// write an array of 10 galleryImage each with src as "" and alt as 'under construction'
 
 export const galleryImages: GalleryImage[] = [
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
     {
         src: "",
-        alt: "shrirang didnt send them yet",
+        alt: "under construction",
     },
 ]
