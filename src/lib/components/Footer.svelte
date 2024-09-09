@@ -1,5 +1,6 @@
 <script>
   import Instagram from "$lib/icons/Instagram.svelte";
+  import LinkedIn from "$lib/icons/LinkedIn.svelte";
   import YouTube from "$lib/icons/YouTube.svelte";
 </script>
 
@@ -28,11 +29,19 @@
         <h3 class="text-lg font-semibold">Follow Us</h3>
         <div class="flex space-x-4 mt-2">
           <a
+            href="https://www.linkedin.com/company/dhruva-astronomy"
+            class="flex items-center justify-center w-10 h-10 bg-neutral-800 rounded-full hover:bg-neutral-700 transition"
+          >
+            <LinkedIn />
+          </a>
+
+          <a
             href="https://www.instagram.com/dhruva_rvce/"
             class="flex items-center justify-center w-10 h-10 bg-neutral-800 rounded-full hover:bg-neutral-700 transition"
           >
             <Instagram />
           </a>
+
           <a
             href="https://www.youtube.com/@dhruva1910"
             class="flex items-center justify-center w-10 h-10 bg-neutral-800 rounded-full hover:bg-neutral-700 transition"
@@ -58,7 +67,8 @@
           >
         </span>
         <span>
-          <a href="/events" class="text-white transition hover:text-sky-500">Events</a
+          <a href="/events" class="text-white transition hover:text-sky-500"
+            >Events</a
           >
         </span>
         <span>

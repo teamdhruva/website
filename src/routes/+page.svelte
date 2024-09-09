@@ -4,7 +4,7 @@
 
   const projects = [
     {
-      imgSrc: "/newbg.jpeg",
+      imgSrc: "/projects/6-inch.jpg",
       title: "6 inch Telescope",
       description: "Description of Project 1",
       link: "/projects/6-inch-telescope",

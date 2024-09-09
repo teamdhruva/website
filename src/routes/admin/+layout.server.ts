@@ -1,15 +1,13 @@
 export const prerender = false;
 
+import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 
 // if the cookie 'accessToken' or 'refreshToken' or 'expiresAt' is not set, redirect to login page
-export const load: LayoutServerLoad = async ({ cookies }) => {
+export const load: LayoutServerLoad = async ({ route, cookies }) => {
 	const sessionid = cookies.get('sessionid');
 
-	if (!sessionid) {
-        return {
-            status: 302,
-            redirect: '/admin/login',
-        };
+	if (!sessionid && route.id !== '/admin/login' && route.id !== '/admin/register') {
+        redirect(302, '/admin/login')
     }
 };

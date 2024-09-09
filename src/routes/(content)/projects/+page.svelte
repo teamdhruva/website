@@ -29,7 +29,9 @@
       >
         <img
           src={project.image}
-          class="p-4 bg-neutral-200 bg-opacity-50 flex w-40 h-40 items-center justify-center"
+          class="bg-opacity-50 flex w-40 h-40 items-center justify-center"
+          class:bg-neutral-200={!project.image}
+          class:p-4={!project.image}
           alt={project.description}
         />
 
