@@ -6,9 +6,12 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"cert": "rm -rf .cert && mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem localhost 127.0.0.1",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"postbuild": "svelte-sitemap -o ./.svelte-kit/cloudflare --domain https://teamdhruva.com"
+		"postbuild": "svelte-sitemap -o ./.svelte-kit/cloudflare --domain https://teamdhruva.com",
+		"pages:dev": "wrangler pages dev --proxy 5174 -- npm run dev",
+		"pages:deploy": "npm run build && wrangler pages deploy .svelte-kit/cloudflare"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -25,5 +28,9 @@
 		"typescript": "^5.0.0",
 		"vite": "^5.0.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@cloudflare/workers-types": "^4.20240903.0",
+		"miniflare": "^3.20240821.1"
+	}
 }

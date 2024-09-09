@@ -24,7 +24,15 @@
     <hr class="mt-4 mb-4" />
 
     <p>
-      We built a Horn Antenna using sheet metal 
+      The 21 cm line is a spectral line of neutral hydrogen, which is the most
+      abundant element in the universe. The 21 cm line is a hyperfine structure
+      line of neutral hydrogen.
+    </p>
+    <p>
+      It is a very important line in radio astronomy because it is the only line
+      that can be detected in the interstellar medium. The 21 cm line is used to
+      study the distribution of neutral hydrogen in the galaxy and can be used
+      to study the rotation curve of the galaxy.
     </p>
   </div>
 </div>

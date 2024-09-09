@@ -5,21 +5,28 @@
   const projects = [
     {
       imgSrc: "/newbg.jpeg",
-      title: "10 inch Telescope",
+      title: "6 inch Telescope",
       description: "Description of Project 1",
+      link: "/projects/6-inch-telescope",
     },
     {
       imgSrc: "/newbg.jpeg",
       title: "Astrophotography",
       description: "Description of Project 2",
+      link: "/projects/astrophotography",
     },
     {
       imgSrc: "/newbg.jpeg",
       title: "Solar Radio Telescope",
       description: "Description of Project 3",
+      link: "/projects/solar-radio-telescope",
     },
   ];
 </script>
+
+<svelte:head>
+  <title>Team dhRuVa</title>
+</svelte:head>
 
 <section class="flex items-center justify-center background h-screen" id="home">
   <div class="box-main max-w-[48rem] flex-1">
@@ -45,7 +52,7 @@
 </section>
 
 <section
-  class="secRight bg-fixed min-h-screen h-min flex flex-col items-center justify-center"
+  class="secRight bg-neutral-900 min-h-screen h-min flex flex-col items-center justify-center"
   id="projects"
 >
   <p class="p-4 text-4xl font-bold text-center text-white mb-8">
@@ -58,6 +65,7 @@
         imgSrc={project.imgSrc}
         title={project.title}
         description={project.description}
+        link={project.link}
       />
     {/each}
   </div>

@@ -147,7 +147,7 @@ fabric.properties
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -339,3 +339,5 @@ package
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,emacs,visualstudiocode,svelte,node,intellij+all
+
+.cert
