@@ -47,7 +47,7 @@
 </div>
 
 <div
-  class="top-0 mt-10 w-11/12 left-1/2 backdrop-blur flex shadow -translate-x-1/2 rounded-lg z-50 fixed justify-between items-center bg-transparent border max-w-screen-xl p-4"
+  class="top-0 mt-10 w-11/12 left-1/2 backdrop-blur flex shadow -translate-x-1/2 rounded-lg z-10 fixed justify-between items-center bg-transparent border max-w-screen-xl p-4"
 >
   <a class="logo font-bold text-2xl text-white" href="/">
     <img src="/text_logo.png" class="max-sm:h-8 sm:h-12" alt="dhRuVa logo" />

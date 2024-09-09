@@ -56,5 +56,6 @@ export const projects: Project[] = [
         description: "A 2 inch telescope, built from scratch.",
         dateStarted: "2021",
         dateCompleted: "2022",
+        image: "/projects/2-inch.jpg"
     }
 ];

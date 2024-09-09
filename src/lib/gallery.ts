@@ -7,51 +7,51 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/1.jpg",
+        alt: "Icebreaker session",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/2.jpg",
+        alt: "Stargazing Spectacles",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/3.jpg",
+        alt: "Talk by Ram Mohan Sir",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/4.jpg",
+        alt: "dhRuVa 2024 Batch",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/5.jpg",
+        alt: "dhRuVa 2021 Batch",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/6.jpg",
+        alt: "Ethnic Day 2024",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/7.jpg",
+        alt: "Solar Observation",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/8.jpg",
+        alt: "Solar Telescope",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/9.jpg",
+        alt: "Intra-club Hackathon",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/10.jpg",
+        alt: "Intra-club Hackathon",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/11.jpg",
+        alt: "dhRuVa 2022 Batch",
     },
     {
-        src: "",
-        alt: "under construction",
+        src: "/gallery/12.jpg",
+        alt: "2-inch Galilean Telescope",
     },
 ]
