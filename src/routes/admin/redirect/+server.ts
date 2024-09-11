@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { OAuth2Client } from 'google-auth-library';
+// import { OAuth2Client } from 'google-auth-library';
 
 const defaultCookieOpts = {
     httpOnly: true,
@@ -7,21 +7,21 @@ const defaultCookieOpts = {
     path: '/'
 };
 
-const oauth = new OAuth2Client();
+// const oauth = new OAuth2Client();
 
 export async function POST({ platform, request, cookies }) {
-    const credential = (await request.formData()).get('credential') as string;
+    // const credential = (await request.formData()).get('credential') as string;
 
-    const ticket = await oauth.verifyIdToken({
-        idToken: credential,
-        audience: "253628048141-1hfqpshu4heivt98qtchfcvuu797pkq9.apps.googleusercontent.com",
-    });
-    const payload = ticket.getPayload()!;
+    // const ticket = await oauth.verifyIdToken({
+    //     idToken: credential,
+    //     audience: "253628048141-1hfqpshu4heivt98qtchfcvuu797pkq9.apps.googleusercontent.com",
+    // });
+    // const payload = ticket.getPayload()!;
 
-    const sessionid = generateSessionId();
-    platform!.env.KV.put(sessionid, payload.email!);
+    // const sessionid = generateSessionId();
+    // platform!.env.KV.put(sessionid, payload.email!);
 
-    cookies.set('sessionid', sessionid, defaultCookieOpts);
+    // cookies.set('sessionid', sessionid, defaultCookieOpts);
 
     redirect(302, '/admin');
 }
