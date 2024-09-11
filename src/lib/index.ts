@@ -7,6 +7,13 @@ export interface TeamMember {
     link: string | null;
 }
 
+export interface Faculty {
+    name: string;
+    linkedin: string | null;
+    image: string | null;
+    link: string | null;
+}
+
 // Aryan - Team Captain
 // Khushi - Team Captain
 // Sunil - Technical Lead
@@ -117,3 +124,19 @@ export const teamMembers: TeamMember[] = [
         link: null,
     },
 ];
+
+
+export const facultymembers: Faculty[]=[
+    {
+        name: "Dr. Karthik Shastry",
+        linkedin:  null,
+        image: "team/faculty/kathik_sir.jpeg",
+        link: "https://rvce.edu.in/ph-faculty-ks"
+    },
+    {
+        name: "Dr. Venugopal K",
+        linkedin:  null,
+        image: "team/faculty/venugopal_sir.png",
+        link: "https://rvce.edu.in//math-venugopal"
+    }
+]
