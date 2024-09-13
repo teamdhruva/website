@@ -7,7 +7,7 @@ import type { LayoutServerLoad } from './$types';
 export const load: LayoutServerLoad = async ({ route, cookies }) => {
 	const sessionid = cookies.get('sessionid');
 
-	if (!sessionid && route.id !== '/admin/login' && route.id !== '/admin/register') {
+	if (!sessionid && route.id !== '/admin/login') {
         redirect(302, '/admin/login')
     }
 };

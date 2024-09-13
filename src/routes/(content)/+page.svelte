@@ -28,7 +28,7 @@
   <title>Team dhRuVa</title>
 </svelte:head>
 
-<section class="flex items-center justify-center background h-screen" id="home">
+<section class="flex items-center justify-center background h-screen w-full" id="home">
   <div class="box-main max-w-[48rem] flex-1">
     <div class="flex flex-col gap-2 p-4 text-center">
       <p class="text-5xl sm:text-8xl">

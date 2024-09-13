@@ -32,6 +32,8 @@
 	"dependencies": {
 		"@cloudflare/workers-types": "^4.20240903.0",
 		"google-auth-library": "^9.14.1",
+		"jose": "^5.8.0",
+		"jsonwebtoken": "^9.0.2",
 		"miniflare": "^3.20240821.1"
 	}
 }

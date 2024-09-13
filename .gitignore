@@ -341,3 +341,5 @@ package
 # End of https://www.toptal.com/developers/gitignore/api/macos,emacs,visualstudiocode,svelte,node,intellij+all
 
 .cert
+/tmp
+.wrangler

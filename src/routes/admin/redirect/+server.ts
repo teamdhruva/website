@@ -1,5 +1,6 @@
 import { redirect } from '@sveltejs/kit';
-// import { OAuth2Client } from 'google-auth-library';
+import type { JWK, KeyLike } from 'jose';
+import * as jose from 'jose'
 
 const defaultCookieOpts = {
     httpOnly: true,
@@ -7,21 +8,24 @@ const defaultCookieOpts = {
     path: '/'
 };
 
-// const oauth = new OAuth2Client();
-
 export async function POST({ platform, request, cookies }) {
-    // const credential = (await request.formData()).get('credential') as string;
+    const db = platform?.env.D1!
+    const credential = (await request.formData()).get('credential') as string;
+    const JWKS = jose.createRemoteJWKSet(new URL('https://www.googleapis.com/oauth2/v3/certs'))
 
-    // const ticket = await oauth.verifyIdToken({
-    //     idToken: credential,
-    //     audience: "253628048141-1hfqpshu4heivt98qtchfcvuu797pkq9.apps.googleusercontent.com",
-    // });
-    // const payload = ticket.getPayload()!;
+    const { payload, protectedHeader } = await jose.jwtVerify(credential, JWKS, {
+        aud: '253628048141-1hfqpshu4heivt98qtchfcvuu797pkq9.apps.googleusercontent.com',
+        hd: 'rvce.edu.in'
+    })
 
-    // const sessionid = generateSessionId();
-    // platform!.env.KV.put(sessionid, payload.email!);
+    const stmt = db.prepare('SELECT * FROM users WHERE email = ?').bind(payload.email);
+    if (!(await stmt.first())) {
+        redirect(302, '/admin')
+    }
 
-    // cookies.set('sessionid', sessionid, defaultCookieOpts);
+    const sessionid = generateSessionId();
+    platform!.env.KV.put(sessionid, payload.email as string);
+    cookies.set('sessionid', sessionid, defaultCookieOpts);
 
     redirect(302, '/admin');
 }

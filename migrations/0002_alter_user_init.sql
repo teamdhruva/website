@@ -1,0 +1,3 @@
+-- Migration number: 0002 	 2024-09-12T15:20:27.960Z
+
+ALTER TABLE users ADD COLUMN batch VARCHAR(255);
