@@ -343,3 +343,4 @@ package
 .cert
 /tmp
 .wrangler
+.env

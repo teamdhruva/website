@@ -22,7 +22,7 @@
   let showSidebar = false;
 </script>
 
-<div class="flex flex-row max-sm:flex-col w-full min-h-screen font-mono">
+<div class="flex flex-row max-sm:flex-col w-full sm:h-screen min-h-screen font-mono overflow-hidden">
   <div class="contents max-sm:hidden">
     <Sidebar />
   </div>
@@ -33,7 +33,7 @@
     </button>
   </div>
 
-  <div class="flex flex-col flex-1 sm:min-h-screen">
+  <div class="flex flex-col flex-1 min-h-screen h-full overflow-y-scroll">
     <slot />
   </div>
 </div>

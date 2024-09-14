@@ -14,7 +14,7 @@
 </script>
 
 <div
-  class="flex flex-col text-center w-48 bg-gradient-to-r from-neutral-900 to-transparent font-mono p-2"
+  class="flex flex-col text-center w-48 bg-gradient-to-r from-neutral-900 to-transparent font-mono p-2 h-screen"
 >
   <img src="/text_logo.png" alt="Logo" />
   <p class="font-bold text-2xl">INTERNAL</p>

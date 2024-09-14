@@ -1,5 +1,4 @@
 <script>
-  import { browser } from "$app/environment";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
 
   const projects = [

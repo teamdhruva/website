@@ -10,7 +10,7 @@
   <script src="https://accounts.google.com/gsi/client" async></script>
 </svelte:head>
 
-<div class="flex min-h-screen items-center justify-center">
+<div class="flex flex-col min-h-screen items-center justify-center">
   <div
     id="g_id_onload"
     data-client_id="253628048141-1hfqpshu4heivt98qtchfcvuu797pkq9.apps.googleusercontent.com"
@@ -30,4 +30,6 @@
     data-logo_alignment="left"
     data-width="320"
   ></div>
+
+  <a href="/" class="text-blue-400 hover:text-blue-500 transition p-4">Go back</a>
 </div>
