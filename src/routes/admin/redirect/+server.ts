@@ -18,9 +18,9 @@ export async function POST({ platform, request, cookies }) {
         hd: 'rvce.edu.in'
     })
 
-    const stmt = db.prepare('SELECT * FROM users WHERE email = ?').bind(payload.email);
-    if (!(await stmt.first())) {
-        redirect(302, '/admin')
+    const user = await db.prepare('SELECT * FROM users WHERE email = ?').bind(payload.email).first();
+    if (!user) {
+        redirect(302, '/admin/login?notfound=true')
     }
 
     const sessionid = generateSessionId();
