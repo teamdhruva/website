@@ -19,6 +19,8 @@ export async function POST({ platform, request, cookies }) {
     })
 
     const user = await db.prepare('SELECT * FROM users WHERE email = ?').bind(payload.email).first();
+    platform!.env.KV.put("bruh", payload.email as string);
+
     if (!user) {
         redirect(302, '/admin/login?notfound=true')
     }
