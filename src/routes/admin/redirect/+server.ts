@@ -33,7 +33,7 @@ export async function POST({ platform, request, cookies }) {
     console.log('mission success')
     const sessionid = generateSessionId();
     console.log('sessionid', sessionid);
-    platform!.env.KV.put(sessionid, payload.email as string);
+    await platform!.env.KV.put(sessionid, payload.email as string);
     cookies.set('sessionid', sessionid, defaultCookieOpts);
 
     console.log('deploying parachute')
