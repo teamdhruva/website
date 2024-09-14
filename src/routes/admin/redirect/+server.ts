@@ -18,17 +18,25 @@ export async function POST({ platform, request, cookies }) {
         hd: 'rvce.edu.in'
     })
 
+    console.log('taking off')
+    console.log(payload);
+
     const user = await db.prepare('SELECT * FROM users WHERE email = ?').bind(payload.email).first();
-    platform!.env.KV.put("bruh", payload.email as string);
+    console.log('landing on the moon')
+    console.log(user);
 
     if (!user) {
+        console.log('abort mission abort mission')
         redirect(302, '/admin/login?notfound=true')
     }
 
+    console.log('mission success')
     const sessionid = generateSessionId();
+    console.log('sessionid', sessionid);
     platform!.env.KV.put(sessionid, payload.email as string);
     cookies.set('sessionid', sessionid, defaultCookieOpts);
 
+    console.log('deploying parachute')
     redirect(302, '/admin');
 }
 
