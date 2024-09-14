@@ -11,7 +11,7 @@
     { href: "/about", text: "About" },
     { href: "/projects", text: "Projects" },
     { href: "/gallery", text: "Gallery" },
-    { href: "/events", text: "Events" },
+    // { href: "/events", text: "Events" },
     { href: "/team", text: "Team" },
     { href: "#contact", text: "Contact" },
   ];

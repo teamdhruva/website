@@ -66,11 +66,11 @@
             >Projects</a
           >
         </span>
-        <span>
+        <!-- <span>
           <a href="/events" class="text-white transition hover:text-sky-500"
             >Events</a
           >
-        </span>
+        </span> -->
         <span>
           <a href="/blog" class="text-white transition hover:text-sky-500"
             >Blog</a

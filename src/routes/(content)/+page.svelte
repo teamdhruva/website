@@ -5,19 +5,19 @@
     {
       imgSrc: "/projects/6-inch.jpg",
       title: "6 inch Telescope",
-      description: "Description of Project 1",
+      description: "Our in-house built reflecting telescope",
       link: "/projects/6-inch-telescope",
     },
     {
-      imgSrc: "/newbg.jpeg",
+      imgSrc: "/projects/moon.jpg",
       title: "Astrophotography",
-      description: "Description of Project 2",
+      description: "Taking pictures of the night sky",
       link: "/projects/astrophotography",
     },
     {
-      imgSrc: "/newbg.jpeg",
+      imgSrc: "/projects/solar-radio.jpg",
       title: "Solar Radio Telescope",
-      description: "Description of Project 3",
+      description: "Observing the sun's radio emissions",
       link: "/projects/solar-radio-telescope",
     },
   ];
@@ -27,7 +27,10 @@
   <title>Team dhRuVa</title>
 </svelte:head>
 
-<section class="flex items-center justify-center background h-screen w-full" id="home">
+<section
+  class="flex items-center justify-center background h-screen w-full"
+  id="home"
+>
   <div class="box-main max-w-[48rem] flex-1">
     <div class="flex flex-col gap-2 p-4 text-center">
       <p class="text-5xl sm:text-8xl">
@@ -50,13 +53,20 @@
   </div>
 </section>
 
+<div class="my-10">
+  <h2 class="p-4 text-4xl font-bold text-center text-white mb-8">Vision</h2>
+  <p class="max-w-screen-lg text-xl text-justify p-2">
+    To foster a community of students passionate about astrophysics and
+    astronomy, and provide them with the resources and opportunities to explore
+    and learn about the cosmos.
+  </p>
+</div>
+
 <section
-  class="secRight bg-neutral-900 min-h-screen h-min flex flex-col items-center justify-center"
+  class="secRight bg-neutral-900 my-10 h-min flex flex-col items-center justify-center"
   id="projects"
 >
-  <p class="p-4 text-4xl font-bold text-center text-white mb-8">
-    Our Projects
-  </p>
+  <p class="p-4 text-4xl font-bold text-center text-white mb-8">Our Projects</p>
 
   <div class="flex flex-wrap justify-center gap-6">
     {#each projects as project}
@@ -69,16 +79,14 @@
     {/each}
   </div>
 
-  <!-- <div class="mt-8">
-    <button
-      class="relative bg-black text-white py-2 px-4 rounded border-2 border-white overflow-hidden hover:bg-gray-800 transition duration-300"
+  <div class="mt-8">
+    <a
+      href="/about"
+      class="text-blue-400 hover:text-blue-500 text-2xl transition"
     >
-      <span
-        class="absolute inset-0 bg-gradient-to-t from-white opacity-30 animate-pulse"
-      ></span>
       Learn more
-    </button>
-  </div> -->
+    </a>
+  </div>
 </section>
 
 <style>

@@ -33,7 +33,7 @@ export const teamMembers: TeamMember[] = [
         linkedin: null,
         instagram: null,
         image: "/team/core/aryan.jpg",
-        link: null,
+        link: "aryan-namboodiri",
     },
     {
         name: "Khushi",
@@ -41,7 +41,7 @@ export const teamMembers: TeamMember[] = [
         linkedin: null,
         instagram: null,
         image: "/team/core/khushi.jpg",
-        link: null,
+        link: "khushi-ligade",
     },
     {
         name: "Sunil",
@@ -49,7 +49,7 @@ export const teamMembers: TeamMember[] = [
         linkedin: null,
         instagram: null,
         image: "/team/core/sunil.jpg",
-        link: null,
+        link: "sunil-joshi",
     },
     {
         name: "Aditi",
@@ -57,7 +57,7 @@ export const teamMembers: TeamMember[] = [
         linkedin: null,
         instagram: null,
         image: "/team/core/aditi.jpg",
-        link: null,
+        link: "aditi-n-pai",
     },
     {
         name: "Shashank",
@@ -81,7 +81,7 @@ export const teamMembers: TeamMember[] = [
         linkedin: null,
         instagram: null,
         image: "/team/core/rohith.jpg",
-        link: null,
+        link: "rohith-gowda-m",
     },
     {
         name: "Harshhitha",
