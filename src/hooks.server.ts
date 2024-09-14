@@ -12,7 +12,9 @@ export async function handle({ event, resolve }) {
 				kvPersist: "./.wrangler/state/v3/kv",
 				kvNamespaces: ["KV"],
 				d1Persist: "./.wrangler/state/v3/d1",
-				d1Databases: ["D1"],
+				d1Databases: {
+                    "D1": "5fb17e9f-aab6-4a2c-9760-ed426ddfdd6e"
+                },
 				script: "",
 				modules: true,
 			});

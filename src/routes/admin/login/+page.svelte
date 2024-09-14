@@ -2,7 +2,6 @@
   import { page } from "$app/stores";
 
   const origin = $page.url.origin;
-  console.log(origin);
 </script>
 
 <svelte:head>
