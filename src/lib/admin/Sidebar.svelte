@@ -16,7 +16,22 @@
 <div
   class="flex flex-col text-center w-48 bg-gradient-to-r from-neutral-900 to-transparent font-mono p-2 h-screen"
 >
-  <img src="/text_logo.png" alt="Logo" />
+  {#if closeButton}
+    <button
+      class="text-white
+        bg-opacity-50
+        hover:text-blue-400
+        transition
+        rounded-md
+        font-bold
+        mt-0 w-12 text-6xl h-12"
+      on:click={closeCallback}
+    >
+      &times;
+    </button>
+  {/if}
+
+  <img src="/text_logo.webp" alt="Logo" />
   <p class="font-bold text-2xl">INTERNAL</p>
 
   <div class="flex flex-col mt-8 gap-4">

@@ -2,7 +2,6 @@
   export let imgSrc;
   export let title;
   export let description;
-  export let buttonText = "Learn More";
   export let link;
 </script>
 

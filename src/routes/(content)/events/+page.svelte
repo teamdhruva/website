@@ -19,21 +19,21 @@
       </h1>
 
       <div class="flex flex-row flex-wrap justify-center items-center gap-4">
-        <img
-          src="/favicon.png"
+        <!-- <img
+          src="/favicon.ico"
           class="p-4 bg-neutral-200 bg-opacity-50 flex w-40 h-40 items-center justify-center"
           alt="example image"
         />
         <img
-          src="/favicon.png"
+          src="/favicon.ico"
           class="p-4 bg-neutral-200 bg-opacity-50 flex w-40 h-40 items-center justify-center"
           alt="example image"
         />
         <img
-          src="/favicon.png"
+          src="/favicon.ico"
           class="p-4 bg-neutral-200 bg-opacity-50 flex w-40 h-40 items-center justify-center"
           alt="example image"
-        />
+        /> -->
       </div>
 
       <div class="flex flex-col flex-1 items-center">

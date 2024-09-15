@@ -13,21 +13,21 @@ export const projects: Project[] = [
         slug: "6-inch-telescope",
         description: "A 6 inch telescope, built from scratch.",
         dateStarted: "March 2024",
-        image: "/projects/6-inch.jpg"
+        image: "/projects/6-inch.webp"
     },
     {
         name: "Astrophotography",
         slug: "astrophotography",
         description: "Photography of celestial objects.",
         dateStarted: "March 2024",
-        image: "/projects/moon.jpg"
+        image: "/projects/moon.webp"
     },
     {
         name: "Solar Radio Telescope",
         slug: "solar-radio-telescope",
         description: "A radio telescope to observe the sun.",
         dateStarted: "February 2024",
-        image: "/projects/solar-radio.jpg"
+        image: "/projects/solar-radio.webp"
     },
     {
         name: "21 cm Radio Telescope",
@@ -63,6 +63,6 @@ export const projects: Project[] = [
         description: "A 2 inch telescope, built from scratch.",
         dateStarted: "2021",
         dateCompleted: "2022",
-        image: "/projects/2-inch.jpg"
+        image: "/projects/2-inch.webp"
     }
 ];

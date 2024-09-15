@@ -3,19 +3,19 @@
 
   const projects = [
     {
-      imgSrc: "/projects/6-inch.jpg",
+      imgSrc: "/projects/6-inch.webp",
       title: "6 inch Telescope",
       description: "Our in-house built reflecting telescope",
       link: "/projects/6-inch-telescope",
     },
     {
-      imgSrc: "/projects/moon.jpg",
+      imgSrc: "/projects/moon.webp",
       title: "Astrophotography",
       description: "Taking pictures of the night sky",
       link: "/projects/astrophotography",
     },
     {
-      imgSrc: "/projects/solar-radio.jpg",
+      imgSrc: "/projects/solar-radio.webp",
       title: "Solar Radio Telescope",
       description: "Observing the sun's radio emissions",
       link: "/projects/solar-radio-telescope",
@@ -35,7 +35,7 @@
     <div class="flex flex-col gap-2 p-4 text-center">
       <p class="text-5xl sm:text-8xl">
         <img
-          src="/text_logo.png"
+          src="/text_logo.webp"
           class="max-sm:h-20 sm:h-48"
           alt="dhRuVa logo"
           id="mainlogo"
@@ -45,7 +45,8 @@
       <div class="buttons">
         <a
           class="text-lg text-sky-400 transition hover:text-sky-500"
-          href="/about">Learn More</a
+          aria-label="Learn more about Team dhRuVa"
+          href="/about">About Us</a
         >
       </div>
     </div>
@@ -104,9 +105,5 @@
       border-color: rgba(255, 255, 255, 0.3); /* Lighter border color */
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Lighter shadow */
     }
-  }
-
-  .animate-twinkle {
-    animation: twinkle 3s infinite; /* Apply the twinkle animation */
   }
 </style>
