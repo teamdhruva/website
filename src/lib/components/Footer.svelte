@@ -26,11 +26,12 @@
         >
       </p>
       <div>
-        <h3 class="text-lg font-semibold">Follow Us</h3>
+        <h2 class="text-lg font-semibold">Follow Us</h2>
         <div class="flex space-x-4 mt-2">
           <a
             href="https://www.linkedin.com/company/dhruva-astronomy"
             class="flex items-center justify-center w-10 h-10 bg-neutral-800 rounded-full hover:bg-neutral-700 transition"
+            aria-label="Team dhRuVa LinkedIn"
           >
             <LinkedIn />
           </a>
@@ -38,6 +39,7 @@
           <a
             href="https://www.instagram.com/dhruva_rvce/"
             class="flex items-center justify-center w-10 h-10 bg-neutral-800 rounded-full hover:bg-neutral-700 transition"
+            aria-label="Team dhRuVa Instagram"
           >
             <Instagram />
           </a>
@@ -45,6 +47,7 @@
           <a
             href="https://www.youtube.com/@dhruva1910"
             class="flex items-center justify-center w-10 h-10 bg-neutral-800 rounded-full hover:bg-neutral-700 transition"
+            aria-label="Team dhRuVa YouTube Channel"
           >
             <YouTube />
           </a>
@@ -54,7 +57,7 @@
 
     <!-- Middle section: Quick links -->
     <div class="space-y-6">
-      <h3 class="text-2xl font-semibold">Quick Links</h3>
+      <h2 class="text-2xl font-semibold">Quick Links</h2>
       <div class="grid grid-cols-2 md:grid-cols-1 gap-2">
         <span>
           <a href="/about" class="text-white transition hover:text-sky-500"
@@ -86,9 +89,9 @@
 
     <!-- Right section: Subscribe -->
     <div class="space-y-6">
-      <h3 class="text-2xl font-semibold">
+      <h2 class="text-2xl font-semibold">
         Subscribe to join our Constellation!
-      </h3>
+      </h2>
       <form class="space-y-4">
         <div class="flex">
           <input

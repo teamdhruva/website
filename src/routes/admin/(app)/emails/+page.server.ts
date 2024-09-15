@@ -2,17 +2,12 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { Cloudflare } from 'cloudflare';
 import { DHRUVA_CLOUDFLARE_EMAIL, DHRUVA_CLOUDFLARE_API_KEY, DHRUVA_CLOUDFLARE_ACCOUNT_ID, DHRUVA_CLOUDFLARE_ZONE_ID } from '$env/static/private';
+import { defaultCookieOpts } from '$lib';
 
 const cloudflare = new Cloudflare({
     apiEmail: DHRUVA_CLOUDFLARE_EMAIL,
     apiKey: DHRUVA_CLOUDFLARE_API_KEY
 })
-
-const defaultCookieOpts = {
-    httpOnly: true,
-    maxAge: 86400,
-    path: '/'
-};
 
 export const load: PageServerLoad = async ({ platform, cookies }) => {
 	const sessionid = cookies.get('sessionid')!;

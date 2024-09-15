@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { teamMembers } from "$lib";
+  import { teamMembers } from "$lib/team";
   import TeamMember from "$lib/components/TeamMember.svelte";
-  import { facultymembers } from "$lib";
+  import { facultymembers } from "$lib/team";
   import Faculty from "$lib/components/Faculty.svelte";
 </script>
 

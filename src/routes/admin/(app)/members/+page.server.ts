@@ -1,11 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-
-const defaultCookieOpts = {
-    httpOnly: true,
-    maxAge: 86400,
-    path: '/'
-};
+import { defaultCookieOpts } from '$lib';
 
 export const load: PageServerLoad = async ({ platform, cookies }) => {
 	const sessionid = cookies.get('sessionid')!;

@@ -1,12 +1,7 @@
+import { defaultCookieOpts } from '$lib';
 import { redirect } from '@sveltejs/kit';
 import type { JWK, KeyLike } from 'jose';
 import * as jose from 'jose'
-
-const defaultCookieOpts = {
-    httpOnly: true,
-    maxAge: 86400,
-    path: '/'
-};
 
 export async function POST({ platform, request, cookies }) {
     const db = platform?.env.D1!

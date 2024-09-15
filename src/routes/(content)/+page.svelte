@@ -83,8 +83,9 @@
     <a
       href="/about"
       class="text-blue-400 hover:text-blue-500 text-2xl transition"
+      aria-label="Learn more about Team dhRuVa"
     >
-      Learn more
+      About Team dhRuVa
     </a>
   </div>
 </section>
