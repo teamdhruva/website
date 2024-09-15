@@ -51,7 +51,11 @@
     {/each}
   </div>
   <div class="md:hidden flex items-center">
-    <button class="text-white" on:click={() => (showMenu = !showMenu)}>
+    <button
+      class="text-white"
+      on:click={() => (showMenu = !showMenu)}
+      aria-label="Open Navigation Menu"
+    >
       <Burger />
     </button>
   </div>
