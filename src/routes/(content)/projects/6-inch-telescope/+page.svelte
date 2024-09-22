@@ -19,7 +19,7 @@
         We built a 6 inch Newtonian telescope from scratch, with a focal length
         of 1200 mm and a maximum magnification of 300x. The telescope was built
         using PVC pipes and a 6 inch mirror. It's not just the moon, but also
-        prominent planets like Jupiter and Saturn are a sight to behold!
+        prominent planets like Jupiter and Saturn that are a sight to behold!
       </p>
 
       <p>
@@ -28,7 +28,6 @@
       </p>
 
       <hr class="mt-4 mb-4" />
-
 
       <div
         class="flex flex-row flex-wrap items-center justify-center gap-4 text-base"
@@ -53,14 +52,15 @@
       </div>
 
       <p>
-        Regular sky observation sessions are conducted using the telescope. The
-        telescope is also used for astrophotography.
+        Regular sky observation sessions are conducted using the telescope. We
+        also use the telescope for astrophotography.
       </p>
 
       <p>
         The future plan of this project is to mount it upon a fully automated
-        equatorial mount - also being developed by the team - to allow the
-        telescope to reach its full potential.
+        equatorial mount - which is also being developed by the team. This will
+        allow the telescope to reach its full potential and be controlled
+        remotely to point at any celestial object.
       </p>
     </div>
   </div>
