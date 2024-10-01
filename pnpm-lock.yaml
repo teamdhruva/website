@@ -26,6 +26,9 @@ importers:
       miniflare:
         specifier: ^3.20240821.1
         version: 3.20240821.1
+      svelte-qrcode:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@prgm/sveltekit-progress-bar':
         specifier: 2.0.0
@@ -1745,6 +1748,9 @@ packages:
       typescript:
         optional: true
 
+  svelte-qrcode@1.0.0:
+    resolution: {integrity: sha512-WrOvyyxtUzu32gVIDxcFMy0A7uUpbl/8yHaTNOsUaI8W5V4wa7AmReCjffhNY2aS42CqCLJ6qdwUoj/KxmeZzA==}
+
   svelte-sitemap@2.6.0:
     resolution: {integrity: sha512-WcwsuIeo8iJFG9a5cgvXwXEGoyjk6Zowb6JmL5BbwfnFXMzakGa1+mQjthw5Ni3UV/gGbE0PgJvc7Ygir3LmFg==}
     engines: {node: '>= 14.17.0'}
@@ -3427,6 +3433,8 @@ snapshots:
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
       typescript: 5.5.2
+
+  svelte-qrcode@1.0.0: {}
 
   svelte-sitemap@2.6.0:
     dependencies:

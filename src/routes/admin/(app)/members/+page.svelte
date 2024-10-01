@@ -3,7 +3,7 @@
     name: string;
     email: string;
     batch: string;
-    permission_level: number;
+    permissions: number;
     slug: string;
   }
 
@@ -77,9 +77,8 @@
             <a
               href={`/member/${user.slug}`}
               class="hover:underline"
-              class:!text-white={user.permission_level === 0}
-              class:!text-blue-500={user.permission_level === 1}
-              class:!text-red-500={user.permission_level === 2}
+              class:text-white={user.permissions === 0}
+              class:text-red-500={user.permissions !== 0}
             >
               {user.name}
             </a>

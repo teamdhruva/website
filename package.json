@@ -36,6 +36,7 @@
 		"google-auth-library": "^9.14.1",
 		"jose": "^5.8.0",
 		"jsonwebtoken": "^9.0.2",
-		"miniflare": "^3.20240821.1"
+		"miniflare": "^3.20240821.1",
+		"svelte-qrcode": "^1.0.0"
 	}
 }

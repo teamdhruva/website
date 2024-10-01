@@ -1,14 +1,22 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  import { isAuthorized, TREASURER } from "./perm";
+  import type { User } from "./types";
+
+  export let user: User | undefined;
 
   const routes = [
     { path: "/admin", name: "Dashboard" },
     { path: "/admin/members", name: "Members" },
     { path: "/admin/emails", name: "Custom Emails" },
-    { path: "/admin/settings", name: "Settings" },
-    { path: "/admin/logout", name: "Logout" },
   ];
 
+  if (user && isAuthorized(user, TREASURER)) {
+    routes.push({ path: "/admin/bills", name: "Bills" });
+  }
+
+  routes.push({ path: "/admin/settings", name: "Settings" })
+  routes.push({ path: "/admin/logout", name: "Logout" })
   export let closeButton = false;
   export let closeCallback = () => {};
 </script>

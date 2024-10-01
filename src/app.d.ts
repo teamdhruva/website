@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { D1Database, KVNamespace } from "@cloudflare/workers-types";
+import type { D1Database, KVNamespace, R2Bucket } from "@cloudflare/workers-types";
 
 // for information about these interfaces
 declare global {
@@ -13,6 +13,7 @@ declare global {
             env: {
                 KV: KVNamespace;
                 D1: D1Database;
+                R2: R2Bucket;
             }
         }
 	}

@@ -10,7 +10,7 @@
 
 <style>
   .bruh {
-    background: rgba(0, 0, 0, 0.7) url("/internal/intbg.png");
+    background: rgba(0, 0, 0, 0.85) url("/internal/intbg.png");
     background-blend-mode: darken;
 
     @apply bg-fixed bg-center;

@@ -9,6 +9,6 @@ export const load: PageServerLoad = async ({ platform, cookies }) => {
         cookies.delete('sessionid', defaultCookieOpts);
         redirect(302, '/admin/login');
     }
-    const users = await platform!.env.D1.prepare('SELECT name, email, slug, batch, permissions FROM users').all();
-    return users;
+    const user = await platform!.env.D1.prepare('SELECT * FROM users WHERE email = ?').bind(email).first();
+    return user;
 };

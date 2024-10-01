@@ -10,3 +10,7 @@ id = "bca8e10458aa48ecb59e2f244d1635d3"
 binding = "D1"
 database_name = "internal"
 database_id = "5fb17e9f-aab6-4a2c-9760-ed426ddfdd6e"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "documents"
