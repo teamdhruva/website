@@ -3,17 +3,34 @@
   import type { Bill, User } from "$lib/admin/types";
   import { quintOut } from "svelte/easing";
   import { fade, fly } from "svelte/transition";
-  import QrCode from "svelte-qrcode";
+  import QR from "@svelte-put/qr/svg/QR.svelte";
+  import { formatDateTime } from "$lib/admin/date";
 
   export let data: { user: User; bills: Bill[] };
 
-  let showPaid = false;
+  let showPaid = "both"; // Change to 'both', 'paid', or 'unpaid'
+  let sortBy = "createdAt"; // Change to 'createdAt' or 'amount'
+  let sortOrder = "asc"; // Change to 'asc' or 'desc'
 
-  $: billsToShow = showPaid
-    ? data.bills
-    : data.bills
-        .filter((bill) => !bill.paid_at)
-        .sort((a, b) => a.created_at.localeCompare(b.created_at));
+  $: billsToShow = data.bills
+    .filter(
+      (bill) =>
+        showPaid === "both" ||
+        (showPaid === "paid" && bill.paid_at) ||
+        (showPaid === "unpaid" && !bill.paid_at),
+    )
+    .sort((a, b) => {
+      const aValue = sortBy === "createdAt" ? new Date(a.created_at) : a.amount;
+      const bValue = sortBy === "createdAt" ? new Date(b.created_at) : b.amount;
+
+      return sortOrder === "asc"
+        ? aValue > bValue
+          ? 1
+          : -1
+        : aValue < bValue
+          ? 1
+          : -1;
+    });
 
   function generateLink(bill: Bill) {
     return generateUpiLink(
@@ -26,7 +43,7 @@
 
   function markAsPaid(bill: Bill) {
     disableAll = true;
-    let body = JSON.stringify({ bill_id: bill.id });
+    let body = JSON.stringify({ id: bill.id });
     fetch(`/api/admin/bills/pay`, { method: "POST", body })
       .then((res) => {
         if (res.ok) {
@@ -44,8 +61,8 @@
 
   function markAsUnpaid(bill: Bill) {
     disableAll = true;
-    let body = JSON.stringify({ bill_id: bill.id });
-    fetch(`/api/admin/bills/unpay`, { method: "POST", body })
+    let body = JSON.stringify({ id: bill.id });
+    fetch(`/api/admin/bills/unpay`, { method: "DELETE", body })
       .then((res) => {
         if (res.ok) {
           data.bills = data.bills.map((b) =>
@@ -70,34 +87,65 @@
 <span class="flex flex-row w-full justify-center items-center gap-4">
   <button
     class="text-red-400 hover:text-red-500 transition bg-neutral-700 hover:bg-neutral-800 bg-opacity-50 rounded-md p-2"
-    on:click={() => (showPaid = !showPaid)}
+    on:click={() =>
+      (showPaid =
+        showPaid === "paid"
+          ? "unpaid"
+          : showPaid === "unpaid"
+            ? "both"
+            : "paid")}
   >
-    {showPaid ? "Hide" : "Show"} Paid Bills
+    {showPaid === "paid"
+      ? "Show Unpaid Bills"
+      : showPaid === "unpaid"
+        ? "Show Both Bills"
+        : "Show Paid Bills"}
+  </button>
+  <button
+    class="text-blue-400 hover:text-blue-500 transition bg-neutral-700 bg-opacity-50 rounded-md p-2"
+    on:click={() => {
+      sortBy = "createdAt";
+      sortOrder = sortOrder === "asc" ? "desc" : "asc";
+    }}
+  >
+    Sort by Created At ({sortOrder === "asc" ? "Descending" : "Ascending"})
+  </button>
+  <button
+    class="text-blue-400 hover:text-blue-500 transition bg-neutral-700 bg-opacity-50 rounded-md p-2"
+    on:click={() => {
+      sortBy = "amount";
+      sortOrder = sortOrder === "asc" ? "desc" : "asc";
+    }}
+  >
+    Sort by Amount ({sortOrder === "asc" ? "Descending" : "Ascending"})
   </button>
 </span>
 
 <div class="flex-1 flex flex-col items-center justify-center gap-4 p-4">
+  <span class="text-center">
+    Showing {billsToShow.length} {showPaid === "both" ? "" : showPaid} bill{billsToShow.length === 1 ? "" : "s"}
+  </span>
+
   {#if billsToShow.length === 0}
     <h2 class="text-2xl text-center text-white">No bills to show! Yay!</h2>
   {/if}
   {#each billsToShow as bill}
     <div
-      class="flex sm:flex-row max-sm:flex-col sm:flex-wrap justify-between w-full max-w-screen-md bg-neutral-800 shadow-md rounded-md p-4 border"
+      class="flex flex-col justify-between w-full max-w-screen-md bg-neutral-800 shadow-md rounded-md p-4 border"
       class:border-green-500={bill.paid_at}
     >
       <div class="flex flex-col gap-2">
-        <h2 class="text-xl font-bold">{bill.name ?? bill.created_by}</h2>
-        <p class="text-lg">{bill.description}</p>
-        <p class="text-lg">Amount: ₹{bill.amount}</p>
-        <p class="text-lg">Pay to: {bill.pay_to}</p>
-        <p class="text-lg">
-          Created at: {new Date(bill.created_at).toLocaleString()}
+        <h2 class="text-xl font-bold">
+          {bill.name ?? bill.created_by}
+          <span class="font-normal text-neutral-500">{bill.pay_to}</span>
+        </h2>
+        <p class="text-lg">₹{bill.amount}, {bill.description}</p>
+        <p class="text-lg text-neutral-500">
+          {formatDateTime(bill.created_at)}
+          {#if bill.paid_at}
+            <span class="text-green-400 opacity-50">(Paid at {formatDateTime(bill.paid_at)})</span>
+          {/if}
         </p>
-        {#if bill.paid_at}
-          <p class="text-lg">
-            Paid at: {new Date(bill.paid_at).toLocaleString()}
-          </p>
-        {/if}
       </div>
       <div class="flex flex-row gap-2">
         <button
@@ -117,7 +165,7 @@
           </button>
         {:else}
           <button
-            class="text-blue-400 hover:text-blue-500 transition bg-neutral-700 disabled:bg-neutral-600 hover:bg-neutral-800 bg-opacity-50 rounded-md p-2"
+            class="text-green-400 hover:text-green-500 transition bg-neutral-700 disabled:bg-neutral-600 hover:bg-neutral-800 bg-opacity-50 rounded-md p-2"
             on:click={() => (qrCodeBill = bill)}
             disabled={disableAll}
           >
@@ -185,7 +233,7 @@
       class="relative bg-white dark:bg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
     >
       <div class="flex flex-col gap-4 items-center justify-center">
-        <QrCode value={generateLink(qrCodeBill)} />
+        <QR data={generateLink(qrCodeBill)} />
         <h2 class="text-lg mb-4">{qrCodeBill.pay_to}</h2>
       </div>
     </div>

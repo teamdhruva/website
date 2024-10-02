@@ -49,6 +49,7 @@ export const POST: RequestHandler = async ({ request, platform, cookies }) => {
         return json({ success: true });
 
     } catch (err) {
+        console.log(err);
         throw error(500, "Server error");
     }
 };

@@ -14,14 +14,14 @@
 
   $: billsToShow = showPaid
     ? data.bills
-    : data.bills
+    : (data.bills ?? [])
         .filter((bill) => !bill.paid_at)
         .sort((a, b) => a.created_at.localeCompare(b.created_at));
 
   let showBillBill: Bill | null = null;
 
   let formBillDescription = "";
-  let formBillAmount = null;
+  let formBillAmount: number | null = null;
   let formBillPayTo = "";
   let formBillImage: File[] = [];
 
@@ -46,6 +46,9 @@
         body: blobData,
       });
 
+      console.log(await blobResponse.text());
+      console.log("Uploaded image");
+
       if (!blobResponse.ok) {
         throw new Error("Failed to upload bill image");
       }
@@ -58,14 +61,21 @@
         image_slug: id,
       });
 
+      console.log("Uploading bill");
+
       const billResponse = await fetch("/api/admin/bills", {
         method: "POST",
         body,
       });
 
+      console.log("Request sent");
+
       if (!billResponse.ok) {
+        console.log(billResponse.status)
         throw new Error("Failed to upload bill");
       }
+
+      console.log("Uploaded bill");
 
       showNewBill = false;
       formBillDescription = "";
@@ -73,12 +83,18 @@
       formBillPayTo = "";
       formBillImage = [];
 
+      console.log("Reset form");
+      
       // Fetch the bills again
       const billsResponse = await fetch("/api/admin/bills");
 
       if (!billsResponse.ok) {
         throw new Error("Failed to fetch bills");
       }
+
+      console.log("Fetched bills");
+
+      console.log(data.bills);
 
       data.bills = await billsResponse.json().bills;
     } catch (err) {
@@ -146,7 +162,7 @@
   <div class="fixed inset-0 z-50 flex items-center justify-center transition">
     <button
       transition:fade={{ duration: 150 }}
-      on:click={() => (showNewBill = null)}
+      on:click={() => (showNewBill = false)}
       class="cursor-default absolute inset-0 bg-black opacity-50"
     ></button>
     <div

@@ -15,6 +15,7 @@
 	},
 	"devDependencies": {
 		"@prgm/sveltekit-progress-bar": "2.0.0",
+		"@svelte-put/qr": "^1.2.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-cloudflare": "^4.5.0",
 		"@sveltejs/kit": "^2.0.0",

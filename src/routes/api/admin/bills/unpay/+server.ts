@@ -9,29 +9,29 @@ export const DELETE: RequestHandler = async ({ request, platform, cookies }) => 
 
     if (!email) {
         cookies.delete('sessionid', defaultCookieOpts);
-        throw error(401, 'Unauthorized');
+        error(401, 'Unauthorized');
     }
 
     const user = await platform!.env.D1.prepare('SELECT * FROM users WHERE email = ?').bind(email).first();
 
     if (!isAuthorized(user, TREASURER)) {
-        throw error(403, 'Forbidden');
+        error(403, 'Forbidden');
+    }
+
+    const { id } = await request.json();
+
+    if (typeof id !== 'number') {
+        error(400, 'Invalid ID format');
     }
 
     try {
-        const { id } = await request.json();
-
-        if (typeof id !== 'number') {
-            throw error(400, 'Invalid ID format');
-        }
-
         const updateQuery = `
             UPDATE bills
             SET paid_at = NULL
             WHERE id = ?;
         `;
 
-        await platform.env.D1.prepare(updateQuery).bind(id).run();
+        await platform!.env.D1.prepare(updateQuery).bind(id).run();
 
         return json({ success: true });
 
