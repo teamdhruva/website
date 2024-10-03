@@ -1,5 +1,7 @@
 <script lang="ts">
+  import BillCard from "$lib/admin/components/BillCard.svelte";
   import type { Bill, User } from "$lib/admin/types";
+  import imageCompression from "browser-image-compression";
   import { quintOut } from "svelte/easing";
   import { fade, fly } from "svelte/transition";
 
@@ -24,34 +26,62 @@
   let formBillAmount: number | null = null;
   let formBillPayTo = "";
   let formBillImage: File[] = [];
+  let formBillFileList: FileList | null = null;
+  let menuKey = -1;
 
   let disableAll = false;
 
   async function uploadBill(e: SubmitEvent) {
-    if (!formBillDescription || !formBillAmount || !formBillPayTo || !formBillImage) {
+    if (
+      !formBillDescription ||
+      !formBillAmount ||
+      !formBillPayTo ||
+      !formBillFileList ||
+      !formBillFileList.item(0)
+    ) {
       return;
     }
 
     disableAll = true;
 
+    let compressedFile: File;
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 1920,
+      useWebWorker: true,
+    };
+    try {
+      compressedFile = await imageCompression(
+        formBillFileList!.item(0)!,
+        options,
+      );
+      console.log(
+        `Compressized size is ${compressedFile.size / 1024 / 1024} MB`,
+      );
+    } catch (error) {
+      console.log("Failed to compress image");
+      console.log(error);
+      return;
+    }
+
     try {
       // Upload the image
       let blobData = new FormData();
-      blobData.append("file", formBillImage[0]);
+      blobData.append("file", compressedFile);
       const id = Math.random().toString(36).substring(2);
-      blobData.append("id", id);
 
-      const blobResponse = await fetch("/api/admin/blob", {
+      const blobResponse = await fetch(`/api/admin/blob/${id}`, {
         method: "POST",
         body: blobData,
       });
 
       console.log(await blobResponse.text());
-      console.log("Uploaded image");
 
       if (!blobResponse.ok) {
         throw new Error("Failed to upload bill image");
       }
+
+      console.log("Uploaded image");
 
       // Upload the bill
       let body = JSON.stringify({
@@ -71,7 +101,7 @@
       console.log("Request sent");
 
       if (!billResponse.ok) {
-        console.log(billResponse.status)
+        console.log(billResponse.status);
         throw new Error("Failed to upload bill");
       }
 
@@ -84,7 +114,7 @@
       formBillImage = [];
 
       console.log("Reset form");
-      
+
       // Fetch the bills again
       const billsResponse = await fetch("/api/admin/bills");
 
@@ -107,7 +137,7 @@
 
 <h1 class="text-4xl font-bold text-center p-2">My Bills</h1>
 
-<span class="flex flex-row items-center gap-4">
+<span class="flex flex-row justify-center m-4 items-center gap-4">
   <button
     class="text-red-400 hover:text-red-500 transition bg-neutral-700 hover:bg-neutral-800 bg-opacity-50 rounded-md p-2"
     on:click={() => (showPaid = !showPaid)}
@@ -128,33 +158,7 @@
     <h2 class="text-2xl text-center text-white">No bills</h2>
   {/if}
   {#each billsToShow as bill}
-    <div
-      class="flex sm:flex-row max-sm:flex-col sm:flex-wrap justify-between w-full max-w-screen-md bg-neutral-800 shadow-md rounded-md p-4 border"
-      class:border-green-500={bill.paid_at}
-    >
-      <div class="flex flex-col gap-2">
-        <h2 class="text-xl font-bold">{bill.name ?? bill.created_by}</h2>
-        <p class="text-lg">{bill.description}</p>
-        <p class="text-lg">Amount: ₹{bill.amount}</p>
-        <p class="text-lg">Pay to: {bill.pay_to}</p>
-        <p class="text-lg">
-          Created at: {new Date(bill.created_at).toLocaleString()}
-        </p>
-        {#if bill.paid_at}
-          <p class="text-lg">
-            Paid at: {new Date(bill.paid_at).toLocaleString()}
-          </p>
-        {/if}
-      </div>
-      <div class="flex flex-row gap-2">
-        <button
-          class="text-blue-400 hover:text-blue-500 transition bg-neutral-700 disabled:bg-neutral-600 hover:bg-neutral-800 bg-opacity-50 rounded-md p-2"
-          on:click={() => (showBillBill = bill)}
-        >
-          View Bill
-        </button>
-      </div>
-    </div>
+    <BillCard {bill} bind:menuKey />
   {/each}
 </div>
 
@@ -200,6 +204,7 @@
           <p>Upload Bill Image</p>
           <input
             type="file"
+            bind:files={formBillFileList}
             bind:value={formBillImage}
             class="p-2 rounded-md bg-neutral-900 text-white"
             accept="image/png, image/jpeg, image/webp"
@@ -239,7 +244,7 @@
       <div class="flex flex-col gap-4">
         <img
           class="flex flex-1 text-center items-center justify-center rounded-lg object-contain"
-          src={`/api/admin/blob?id=${showBillBill.id}`}
+          src={`/api/admin/blob/${showBillBill.image_slug}`}
           alt={showBillBill.description}
           loading="lazy"
         />

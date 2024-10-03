@@ -33,6 +33,7 @@
 	"type": "module",
 	"dependencies": {
 		"@cloudflare/workers-types": "^4.20240903.0",
+		"browser-image-compression": "^2.0.2",
 		"cloudflare": "^3.5.0",
 		"google-auth-library": "^9.14.1",
 		"jose": "^5.8.0",

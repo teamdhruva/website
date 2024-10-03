@@ -66,12 +66,12 @@ export const DELETE: RequestHandler = async ({ request, platform, cookies }) => 
     try {
         const body: { id: number } = await request.json();
 
-        const user: User = await platform.env.D1.prepare('SELECT * FROM users WHERE email = ?;').bind(email).first();
+        const user: User = await platform!.env.D1.prepare('SELECT * FROM users WHERE email = ?;').bind(email).first();
 
         const deleteQuery = "DELETE FROM bills WHERE id = ? AND created_by = ?;";
-        const adminDeleteQuery = "DELETE FROM bills WHERE id = ?;";
+        const adminDeleteQuery = "DELETE FROM bills WHERE id = ? AND (? IS NOT NULL);";
 
-        await platform.env.D1
+        await platform!.env.D1
             .prepare(isAuthorized(user, TREASURER) ? adminDeleteQuery : deleteQuery)
             .bind(body.id, email)
             .run();
@@ -79,6 +79,7 @@ export const DELETE: RequestHandler = async ({ request, platform, cookies }) => 
         return json({ success: true });
 
     } catch (err) {
+        console.log(err);
         throw error(500, 'Server error');
     }
 }

@@ -13,7 +13,6 @@ export const load: PageServerLoad = async ({ platform, cookies }) => {
     const user = await platform!.env.D1.prepare('SELECT * FROM users WHERE email = ?').bind(email).first();
     if (isAuthorized(user, TREASURER)) {
         const bills = (await platform!.env.D1.prepare('SELECT bills.*, users.name FROM bills JOIN users ON bills.created_by = users.email ORDER BY bills.created_at DESC').all()).results;
-        console.log(bills);
         return {
             user,
             bills,
