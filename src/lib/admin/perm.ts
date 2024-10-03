@@ -7,7 +7,7 @@ export function isPermAuthorized(user: number, perm: number) {
     return (user & perm) === perm || (user & ADMIN) === ADMIN
 }
 
-export function isAuthorized(user: User, perm: number) {
+export function isAuthorized(user: { permissions: number }, perm: number) {
     return isPermAuthorized(user.permissions, perm)
 }
 
@@ -15,7 +15,7 @@ export function isPermAuthorizedAll(user: number, ...perms: number[]) {
     return (user & ADMIN) === ADMIN || perms.every(perm => isPermAuthorized(user, perm))
 }
 
-export function isAuthorizedAll(user: User, ...perms: number[]) {
+export function isAuthorizedAll(user: { permissions: number }, ...perms: number[]) {
     return isPermAuthorizedAll(user.permissions, ...perms)
 }
 

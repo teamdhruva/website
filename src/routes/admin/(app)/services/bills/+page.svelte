@@ -7,16 +7,14 @@
 
   export let data: { user: User; bills: Bill[]; newBill: boolean };
 
-  if (!data.bills) {
-    data.bills = [];
-  }
-
   let showNewBill = data.newBill;
   let showPaid = false;
 
+  var allBills = data.bills ?? [];
+
   $: billsToShow = showPaid
-    ? data.bills
-    : (data.bills ?? [])
+    ? allBills
+    : (allBills ?? [])
         .filter((bill) => !bill.paid_at)
         .sort((a, b) => a.created_at.localeCompare(b.created_at));
 
@@ -123,15 +121,32 @@
       }
 
       console.log("Fetched bills");
+      let json = await billsResponse.json();
 
-      console.log(data.bills);
-
-      data.bills = await billsResponse.json().bills;
+      allBills = json.bills;
+      console.log(allBills);
     } catch (err) {
       console.error(err);
     } finally {
       disableAll = false;
     }
+  }
+
+  function deleteBill(bill: Bill) {
+    disableAll = true;
+    let body = JSON.stringify({ id: bill.id });
+    fetch(`/api/admin/bills`, { method: "DELETE", body })
+      .then((res) => {
+        if (res.ok) {
+          allBills = allBills.filter((b) => b.id !== bill.id);
+        } else {
+          console.error("Failed to delete bill");
+        }
+      })
+      .finally(() => {
+        disableAll = false;
+        menuKey = -1;
+      });
   }
 </script>
 
@@ -158,7 +173,7 @@
     <h2 class="text-2xl text-center text-white">No bills</h2>
   {/if}
   {#each billsToShow as bill}
-    <BillCard {bill} bind:menuKey />
+    <BillCard {bill} bind:menuKey deleteBill={() => deleteBill(bill)} />
   {/each}
 </div>
 

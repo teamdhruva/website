@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { ADMIN, isAuthorized, TREASURER } from "$lib/admin/perm";
+
   interface PartialUser {
     name: string;
     email: string;
@@ -67,6 +69,7 @@
         <th class="p-2 cursor-pointer" on:click={() => toggleSort("email")}>
           Email {sortBy === "email" ? (sortAsc ? "↑" : "↓") : ""}
         </th>
+        <!-- <th class="p-2"> Roles </th> -->
       </tr>
     </thead>
     <tbody class="">
@@ -78,23 +81,39 @@
               href={`/member/${user.slug}`}
               class="hover:underline"
               class:text-white={user.permissions === 0}
-              class:text-red-500={user.permissions !== 0}
             >
               {user.name}
             </a>
           </td>
           <td class="p-2">{user.email}</td>
+          <!-- <td>
+            {#if isAuthorized(user, ADMIN)}
+              🔑
+            {/if}
+            {#if isAuthorized(user, TREASURER)}
+              💸
+            {/if}
+          </td> -->
         </tr>
       {/each}
     </tbody>
   </table>
+
+  <!-- <div class="flex flex-col items-center mt-8">
+    <div class="flex flex-col">
+      <span class="text-center text-lg">Legend</span>
+      <span>💸 Treasurer</span>
+      <span>🔑 Admin</span>
+    </div>
+  </div> -->
 </div>
 
 <style>
   a {
     text-decoration: none;
   }
-  th, td {
+  th,
+  td {
     text-align: center;
   }
 </style>

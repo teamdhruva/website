@@ -14,8 +14,24 @@
   <h2 class="text-2xl text-center text-white">Email: {data.email}</h2>
   <h2 class="text-2xl text-center text-white">Batch: {data.batch}</h2>
 
+  <div class="flex flex-col text-base my-4">
+    <p class="flex gap-2">
+      <span class="font-semibold">Your permissions:</span>
+      {#if data.permissions & 1}
+        <span>Admin</span>
+      {:else}
+        {#if data.permissions & 2}
+          Treasurer
+        {/if}
+        <span class="hidden"></span>
+      {/if}
+    </p>
+  </div>
+
   <div class="flex flex-col rounded-md my-2 flex-1 w-full bg-opacity-25">
     <div class="flex flex-col gap-4 p-2 items-center">
+      <h1 class="text-2xl">Quick Links</h1>
+
       <a
         href="/admin/services/bills?new=true"
         class="text-blue-400 hover:text-blue-500 transition w-full"
