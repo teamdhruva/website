@@ -138,7 +138,7 @@
         y: 500,
         easing: quintOut,
       }}
-      class="relative bg-white dark:bg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
+      class="relativebg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
     >
       <h2 class="text-xl mb-4 font-semibold">{bill.description}</h2>
       <div class="flex flex-col gap-4">
@@ -168,7 +168,7 @@
         y: 500,
         easing: quintOut,
       }}
-      class="relative bg-white dark:bg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
+      class="relativebg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
     >
       <div class="flex flex-col gap-4 items-center justify-center">
         <QR data={generateLink(bill)} />
@@ -193,7 +193,7 @@
         y: 500,
         easing: quintOut,
       }}
-      class="relative flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
+      class="relative flex flex-col items-center justify-center gap-2bg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
     >
       <h2 class="text-xl font-semibold">
         Are you sure you want to delete this bill?

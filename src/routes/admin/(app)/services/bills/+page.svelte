@@ -192,7 +192,7 @@
         y: 500,
         easing: quintOut,
       }}
-      class="relative bg-white dark:bg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
+      class="relativebg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
     >
       <h2 class="text-xl mb-4 font-semibold">New bill</h2>
       <form class="flex flex-col gap-4" on:submit|preventDefault={uploadBill}>
@@ -253,7 +253,7 @@
         y: 500,
         easing: quintOut,
       }}
-      class="relative bg-white dark:bg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
+      class="relativebg-neutral-800 rounded-lg p-8 max-w-2xl m-8"
     >
       <h2 class="text-xl mb-4 font-semibold">{showBillBill.description}</h2>
       <div class="flex flex-col gap-4">
