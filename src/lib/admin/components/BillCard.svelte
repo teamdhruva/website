@@ -91,9 +91,9 @@
             >
               View Bill
             </button>
-            <a href={`/api/admin/blob/${bill.image_slug}`} download={`${bill.image_slug}`}>
+            <a href={`/api/admin/blob/${bill.image_slug}`} download={`${bill.image_slug}`} class="w-full">
               <button
-                class="text-blue-400 hover:text-blue-500 transition bg-neutral-700 bg-opacity-50 rounded-md p-2"
+                class="text-blue-400 hover:text-blue-500 transition bg-neutral-700 bg-opacity-50 w-full rounded-md p-2"
               >
                 Download Bill
               </button>
