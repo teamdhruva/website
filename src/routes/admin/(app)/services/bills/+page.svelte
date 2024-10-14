@@ -66,7 +66,8 @@
       // Upload the image
       let blobData = new FormData();
       blobData.append("file", compressedFile);
-      const id = Math.random().toString(36).substring(2);
+      let id = Math.random().toString(36).substring(2);
+      id += compressedFile.name.match(/\.[0-9a-z]+$/i)?.[0] ?? "";
 
       const blobResponse = await fetch(`/api/admin/blob/${id}`, {
         method: "POST",

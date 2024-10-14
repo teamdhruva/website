@@ -91,6 +91,13 @@
             >
               View Bill
             </button>
+            <a href={`/api/admin/blob/${bill.image_slug}`} download={`${bill.image_slug}`}>
+              <button
+                class="text-blue-400 hover:text-blue-500 transition bg-neutral-700 bg-opacity-50 rounded-md p-2"
+              >
+                Download Bill
+              </button>
+            </a>
             {#if deleteBill}
               <button
                 class="text-red-400 hover:text-red-500 transition bg-neutral-700 bg-opacity-50 rounded-md p-2"
