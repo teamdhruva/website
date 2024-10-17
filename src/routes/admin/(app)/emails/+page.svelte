@@ -13,6 +13,10 @@
   console.log(getUserName("shrishvd.cy23@rvce.edu.in"))
 </script>
 
+<svelte:head>
+  <title>Custom Emails</title>
+</svelte:head>
+
 <h1 class="text-4xl font-bold text-center p-2">Custom Email Addresses</h1>
 
 <div class="flex-1 flex flex-col items-center justify-center gap-4 p-4">

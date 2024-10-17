@@ -43,6 +43,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>All Members</title>
+</svelte:head>
+
 <h1 class="text-4xl font-bold text-center p-2">Club Members</h1>
 
 <!-- Search Box -->

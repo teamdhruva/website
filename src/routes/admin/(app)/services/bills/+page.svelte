@@ -151,6 +151,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>My Bills</title>
+</svelte:head>
+
 <h1 class="text-4xl font-bold text-center p-2">My Bills</h1>
 
 <span class="flex flex-row justify-center m-4 items-center gap-4">

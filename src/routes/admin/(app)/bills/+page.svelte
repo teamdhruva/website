@@ -87,6 +87,10 @@
   let disableAll = false;
 </script>
 
+<svelte:head>
+  <title>Manage Bills</title>
+</svelte:head>
+
 <h1 class="text-4xl font-bold text-center p-2">Bills</h1>
 
 <span class="flex flex-row justify-center items-center gap-4 m-4">
