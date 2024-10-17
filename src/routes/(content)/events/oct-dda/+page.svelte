@@ -2,6 +2,10 @@
   // Add any JavaScript logic if needed
 </script>
 
+<svelte:head>
+  <title>Astronomy Workshop</title>
+</svelte:head>
+
 <div
   class="flex flex-col items-center justify-center min-h-screen mt-40 text-white px-6"
 >

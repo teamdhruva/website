@@ -2,6 +2,10 @@
   // Add any JavaScript logic if needed
 </script>
 
+<svelte:head>
+  <title>Einstein Lectures</title>
+</svelte:head>
+
 <div class="flex flex-col items-center justify-center min-h-screen mt-40 text-white px-6">
   <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-center">
     Einstein Lectures
