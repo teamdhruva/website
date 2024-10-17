@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-white bg-neutral-800
+    @apply text-white bg-neutral-900
 }
 
 @font-face {

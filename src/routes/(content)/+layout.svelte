@@ -36,7 +36,7 @@
 </div>
 
 <div
-  class="top-0 mt-10 w-11/12 left-1/2 backdrop-blur flex shadow -translate-x-1/2 rounded-lg z-10 fixed justify-between items-center bg-transparent border max-w-screen-xl p-4"
+  class="top-0 mt-10 w-11/12 left-1/2 backdrop-blur flex shadow -translate-x-1/2 rounded-lg z-50 fixed justify-between items-center bg-transparent border max-w-screen-xl p-4"
 >
   <a class="logo font-bold text-2xl text-white" href="/">
     <img src="/text_logo.webp" class="max-sm:h-8 sm:h-12" alt="dhRuVa logo" />
@@ -64,6 +64,7 @@
 {#if showMenu}
   <div
     transition:slide
+    style="-webkit-backdrop-filter: blur(10px);"
     class="fixed top-28 left-0 w-full bg-transparent backdrop-blur border shadow-lg z-40"
   >
     <div class="flex flex-col p-4 gap-4 font-semibold items-center">

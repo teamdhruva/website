@@ -21,6 +21,22 @@
       link: "/projects/solar-radio-telescope",
     },
   ];
+
+  // Event cards data
+  const events = [
+    {
+      imgSrc: "/events/astronomy-workshop.png",
+      title: "Astronomy Workshop",
+      description: "Hands-on data manipulation, astronomy analysis, and machine learning.",
+      link: "/events/oct-dda",
+    },
+    {
+      imgSrc: "/events/einstein-lectures-logo.png",
+      title: "Einstein Lectures",
+      description: "Explore the life and contributions of Chandrasekhar with Rajaram Nityananda.",
+      link: "/events/oct-29",
+    },
+  ];
 </script>
 
 <svelte:head>
@@ -63,6 +79,21 @@
   </p>
 </div>
 
+<section class=" py-10">
+  <h2 class="p-4 text-4xl font-bold text-center text-white mb-8">Upcoming Events</h2>
+
+  <div class="flex flex-wrap justify-center gap-6">
+    {#each events as event}
+      <ProjectCard
+        imgSrc={event.imgSrc}
+        title={event.title}
+        description={event.description}
+        link={event.link}
+      />
+    {/each}
+  </div>
+</section>
+
 <section
   class="secRight bg-neutral-900 my-10 h-min flex flex-col items-center justify-center"
   id="projects"
@@ -90,20 +121,3 @@
     </a>
   </div>
 </section>
-
-<style>
-  @keyframes twinkle {
-    0% {
-      border-color: rgba(255, 255, 255, 0.3); /* Lighter border color */
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Lighter shadow */
-    }
-    50% {
-      border-color: rgba(255, 255, 255, 0.8); /* Medium border color */
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Medium shadow */
-    }
-    100% {
-      border-color: rgba(255, 255, 255, 0.3); /* Lighter border color */
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Lighter shadow */
-    }
-  }
-</style>
