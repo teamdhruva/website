@@ -4,6 +4,12 @@
 
 <svelte:head>
   <title>Astronomy Workshop</title>
+
+  <meta property="og:title" content="Data Driven Astronomy Workshop" />
+  <meta property="og:description" content="Experience astronomy with hands-on activities" />
+  <meta property="og:image" content="https://teamdhruva.com/events/astronomy-workshop.png" />
+  <meta property="og:url" content="https://teamdhruva.com/events/oct-dda" />
+  <meta property="og:type" content="website" />
 </svelte:head>
 
 <div

@@ -4,6 +4,12 @@
 
 <svelte:head>
   <title>Einstein Lectures</title>
+
+  <meta property="og:title" content="Einstein Lectures: The Six Faces of Subrahmanyan Chandrasekhar" />
+  <meta property="og:description" content="Join us for a lecture by Rajaram Nityananda on the contributions of S. Chandrasekhar." />
+  <meta property="og:image" content="https://teamdhruva.com/events/einstein-lectures-logo.png" /> <!-- Replace with your event image URL -->
+  <meta property="og:url" content="https://teamdhruva.com/events/oct-29" /> <!-- Replace with your event URL -->
+  <meta property="og:type" content="website" />
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center min-h-screen mt-40 text-white px-6">
