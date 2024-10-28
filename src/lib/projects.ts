@@ -51,9 +51,9 @@ export const projects: Project[] = [
         image: "/projects/nanograv.png"
     },
     {
-        name: "Star Cluster Analysis",
-        slug: "star-cluster-analysis",
-        description: "Finding anomalies in star clusters.",
+        name: "Exploring Galatic Interaction",
+        slug: "galactic-interaction",
+        description: "Analyzing the interaction between galaxies and star clusters.",
         dateStarted: "July 2024",
         image: "/projects/starcluster.jpg"
     },
