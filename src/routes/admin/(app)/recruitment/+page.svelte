@@ -31,7 +31,7 @@
   <title>Recruitment Members</title>
 </svelte:head>
 
-<h1 class="text-4xl font-bold text-center p-2">Recruitment Test</h1>
+<h1 class="text-4xl font-bold text-center p-2">Recruitment Members</h1>
 
 <!-- Search Box -->
 <div class="flex justify-center mb-4 p-2">
