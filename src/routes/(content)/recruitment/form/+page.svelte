@@ -42,7 +42,7 @@
 
     if (res.ok) {
       let out = await res.json();
-      data = out;
+      user = out;
       disabled = false;
     } else {
       error = "An error occurred. Please try again.";
@@ -57,7 +57,7 @@
     });
 
     if (res.ok) {
-      data = {};
+      user = {};
       disabled = false;
     } else {
       error = "An error occurred. Please try again.";
