@@ -15,6 +15,7 @@
     routes.push({ path: "/admin/bills", name: "Bills" });
   }
 
+  routes.push({ path: "/admin/recruitment", name: "Recruitment" });
   routes.push({ path: "/admin/settings", name: "Settings" })
   routes.push({ path: "/admin/logout", name: "Logout" })
   export let closeButton = false;
