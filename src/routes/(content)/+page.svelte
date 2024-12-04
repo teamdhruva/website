@@ -27,13 +27,15 @@
     {
       imgSrc: "/events/astronomy-workshop.png",
       title: "Astronomy Workshop",
-      description: "Hands-on data manipulation, astronomy analysis, and machine learning.",
+      description:
+        "Hands-on data manipulation, astronomy analysis, and machine learning.",
       link: "/events/oct-dda",
     },
     {
       imgSrc: "/events/einstein-lectures-logo.png",
       title: "Einstein Lectures",
-      description: "Explore the life and contributions of Chandrasekhar with Rajaram Nityananda.",
+      description:
+        "Explore the life and contributions of Chandrasekhar with Rajaram Nityananda.",
       link: "/events/oct-29",
     },
   ];
@@ -80,18 +82,17 @@
 </div>
 
 <section class=" py-10">
-  <h2 class="p-4 text-4xl font-bold text-center text-white mb-8">Upcoming Events</h2>
+  <h2 class="p-4 text-4xl font-bold text-center text-white mb-8">
+    Recruitment
+  </h2>
 
-  <div class="flex flex-wrap justify-center gap-6">
-    {#each events as event}
-      <ProjectCard
-        imgSrc={event.imgSrc}
-        title={event.title}
-        description={event.description}
-        link={event.link}
-      />
-    {/each}
-  </div>
+  <p>
+    Interview selections for the 2024 recruitment cycle are out! Check it out at
+    our <a
+      class="text-blue-400 hover:text-blue-500 transition"
+      href="/recruitment">Recruitment page</a
+    >.
+  </p>
 </section>
 
 <section
