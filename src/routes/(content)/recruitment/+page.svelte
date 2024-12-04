@@ -1,83 +1,86 @@
-<script>
-  import { page } from "$app/stores";
+<script lang="ts">
+  import json from '$lib/recruitment/interview_round.json';
 
-  const origin = $page.url.origin;
+  const departments: Record<string, string> = {
+    ae: "Aerospace Engineering",
+    bt: "Biotechnology",
+    cd: "Computer Science (Data Science)",
+    cy: "Computer Science (Cyber Security)",
+    ai: "Artificial Intelligence",
+    cs: "Computer Science",
+    ec: "Electronics and Communication",
+    cv: "Civil Engineering",
+    ee: "Electrical and Electronics",
+    im: "Industrial Engineering and Management",
+    me: "Mechanical Engineering",
+    is: "Information Science",
+    et: "Electronics and Telecommunication",
+    ch: "Chemical Engineering",
+  };
+
+  // Expand departments with full names
+  const expandedResults = {
+    first: Object.fromEntries(
+      Object.entries(json.first).map(([code, names]) => [departments[code] || code, names]).map(([code, names]) => {
+        // Sort names alphabetically
+        names.sort((a, b) => a.localeCompare(b));
+        return [code, names];
+      })
+    ),
+    third: Object.fromEntries(
+      Object.entries(json.third).map(([code, names]) => [departments[code] || code, names]).map(([code, names]) => {
+        // Sort names alphabetically
+        names.sort((a, b) => a.localeCompare(b));
+        return [code, names];
+      })
+    )
+  };
+
+  function titleCase(str: string) {
+    return str.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+  }
 </script>
 
 <svelte:head>
-  <title>Recruitment</title>
-
-  <meta property="og:title" content="Team dhRuVa" />
-  <meta
-    property="og:description"
-    content="Join us! Team dhRuVa is recruiting!"
-  />
-  <meta property="og:url" content="https://teamdhruva.com/recruitment" />
-  <meta property="og:type" content="website" />
-
-  <script src="https://accounts.google.com/gsi/client" async></script>
+  <title>Interview Selects</title>
 </svelte:head>
 
 <div
   class="flex flex-col items-center justify-center min-h-screen mt-24 text-white px-6"
 >
-  <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-center">Recruitment</h1>
-  <h2 class="text-2xl text-center mb-4">Team dhRuVa is recruiting! Join us!</h2>
+  <h1 class="text-4xl sm:text-5xl font-bold mb-6 mt-16 text-center">Interview Selects</h1>
+  <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-center">Check your email for more information!</h2>
 
-  <div class="w-full max-w-4xl bg-neutral-800 p-6 rounded-lg shadow-lg">
-    <h2 class="text-3xl font-semibold text-yellow-300 mb-4">
-      Recruitment Test
-    </h2>
-    <table class="table-auto w-full text-left text-gray-300 mb-6">
-      <tbody>
-        <tr>
-          <td class="py-2 px-4">📅 <span class="text-white">Date</span></td>
-          <td class="py-2 px-4">November 23, 2024</td>
-        </tr>
-        <tr class="bg-gray-700">
-          <td class="py-2 px-4">⏰ <span class="text-white">Time</span></td>
-          <td class="py-2 px-4">pls tell me</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4">📍 <span class="text-white">Venue</span></td>
-          <td class="py-2 px-4"
-            >DTL Huddle</td
-          >
-        </tr>
-      </tbody>
-    </table>
+  <div class="w-full max-w-6xl">
+    <!-- Combined First and Third Years -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {#each Object.entries(expandedResults.first) as [department, firstYearNames]}
+        <div class="bg-neutral-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-yellow-300">{department}</h3>
+          
+          <!-- First Years -->
+          <div class="mb-4">
+            <h4 class="font-semibold text-white">1st Semester</h4>
+            <ul class="list-disc pl-5 space-y-1 text-gray-300">
+              {#each firstYearNames as name}
+                <li>{titleCase(name)}</li>
+              {/each}
+            </ul>
+          </div>
 
-    <h2 class="text-2xl text-center">Register now</h2>
-
-    <div class="flex justify-center items-center mt-3 mb-6">
-      <div
-        id="g_id_onload"
-        data-client_id="253628048141-1hfqpshu4heivt98qtchfcvuu797pkq9.apps.googleusercontent.com"
-        data-context="signin"
-        data-ux_mode="redirect"
-        data-login_uri={`${origin}/recruitment/redirect`}
-        data-auto_prompt="false"
-      ></div>
-
-      <div
-        class="g_id_signin"
-        data-type="standard"
-        data-shape="pill"
-        data-theme="filled_blue"
-        data-text="signin_with"
-        data-size="large"
-        data-logo_alignment="left"
-        data-width="320"
-      ></div>
-    </div>
-
-    <div>
-      To register, sign in aboveith your RVCE email ID. Fill out the form and
-      attend the recruitment test on the specified date and time.
+          <!-- Third Years -->
+          {#if expandedResults.third[department]}
+            <div>
+              <h4 class="font-semibold text-neutral-300">3rd Semester</h4>
+              <ul class="list-disc pl-5 space-y-1 text-neutral-300">
+                {#each expandedResults.third[department] as name}
+                  <li>{titleCase(name)}</li>
+                {/each}
+              </ul>
+            </div>
+          {/if}
+        </div>
+      {/each}
     </div>
   </div>
-
-  <p class="mt-10 text-gray-400">
-    We look forward to seeing you there!
-  </p>
 </div>
