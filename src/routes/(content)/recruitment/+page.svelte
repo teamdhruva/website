@@ -56,7 +56,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {#each Object.entries(expandedResults.first) as [department, firstYearNames]}
         <div class="bg-neutral-800 p-4 rounded-lg shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-yellow-300">{department}</h3>
+          <h3 class="text-xl font-semibold mb-2 text-red-400">{department}</h3>
           
           <!-- First Years -->
           <div class="mb-4">
