@@ -42,14 +42,14 @@
 </script>
 
 <svelte:head>
-  <title>Interview Selects</title>
+  <title>Recruitment Result</title>
 </svelte:head>
 
 <div
   class="flex flex-col items-center justify-center min-h-screen mt-24 text-white px-6"
 >
-  <h1 class="text-4xl sm:text-5xl font-bold mb-6 mt-16 text-center">Interview Selects</h1>
-  <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-center">Check your email for more information!</h2>
+  <h1 class="text-4xl sm:text-5xl font-bold mb-6 mt-16 text-center">Welcome to our Constellation</h1>
+  <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-center">Congratulations on making it to the team</h2>
 
   <div class="w-full max-w-6xl">
     <!-- Combined First and Third Years -->
